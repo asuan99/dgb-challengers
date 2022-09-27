@@ -1,0 +1,12 @@
+{
+    "searchNews": {
+        "url": "/v3/searchNews",
+        "method": "get",
+        "response": {
+            "ok": {
+                "statusCode": 200,
+                "json": {}
+            }
+        }
+    }
+}
