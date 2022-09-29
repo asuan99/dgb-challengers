@@ -30,6 +30,7 @@ interface RouterApiSpec {
     url:string;
     response : ResponseData,
     body?:any;
+    params?:any;
     description:string;
     headers?:{
         Authorization:{

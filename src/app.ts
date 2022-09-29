@@ -24,7 +24,8 @@ const framework = new Framework({
     appProps: {
         modules: {
             router: new RouterModule({
-                path: path.join(__dirname, 'public/json/api.json'), routeFunctions: {
+                
+                path: path.join(process.cwd(),'/api.json'), routeFunctions: {
                     ...(new PageController()).default,
                 }
             }),
