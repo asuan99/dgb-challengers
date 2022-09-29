@@ -8,5 +8,15 @@
                 "json": {}
             }
         }
+    },
+    "index":{
+        "url":"/",
+        "method":"get",
+        "response": {
+            "ok": {
+                "statusCode": 200,
+                "json": {}
+            }
+        }
     }
 }

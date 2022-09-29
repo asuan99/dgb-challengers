@@ -14,9 +14,15 @@ class PageController implements ControllerDefaultClass {
             res.status(200).json(temp);
         }
     }
+    private index(api:RouterApiSpec){
+        return async (req:express.Request,res:express.Response)=>{
+            res.render('index');
+        }
+    }
     get default() {
         return {
-            searchNews: this.searchNews
+            searchNews: this.searchNews,
+            index : this.index,
         }
     }
 }
