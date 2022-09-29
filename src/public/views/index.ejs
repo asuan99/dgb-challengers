@@ -6,8 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
+
+    <style>
+        html{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        body{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        header{
+            width: 100%;
+        }
+
+        .header-profile-info{
+            display: inline-flex;
+            border: 1px solid gray;
+        }
+
+        .retire-image-box{
+            margin: 12px;
+            padding: 48px;
+
+            border: 1px solid black;
+            border-radius: 48px;
+            overflow: hidden;
+            background: url("../css/retire_image.jpg") no-repeat;
+            background-size: cover;
+        }
+
+        .retire-comment-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 24px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Hello World</h2>
+    <header>
+        <div class="header-profile-info">
+            <div class="retire-image-box"></div>
+            <div class="retire-comment-box">
+                <span>은퇴, 계획하자!</span><br>
+                <span>-> 은퇴의 ㅇ</span>    
+            </div>
+        </div>
+
+        <div class="header-menu">
+
+        </div>
+    </header>
+
+    <section>
+
+    </section>
 </body>
 </html>
