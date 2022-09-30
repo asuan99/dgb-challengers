@@ -27,7 +27,16 @@
 .rate-year-move{
     position: absolute;
     left: 0;
+    bottom: 24px;
+}
+
+.rate-year-progress{
+    position: absolute;
+    left: 0;
+    right: 640px;
     bottom: 0;
+    height: 24px;
+    background-color: blue;
 }
 
 .rate-year-line{
@@ -65,4 +74,51 @@
     width: 100px;
     color: aqua;
     background: transparent;
+}
+
+.main-bot-section{
+    padding-bottom: 30px;
+}
+
+.user-group{
+    margin-top: 48px;
+    text-align: center;
+}
+
+.rate-group{
+    position: relative;
+    width: 640px;
+    height: 72px;
+    
+    margin: 32px auto 0 auto;
+}
+
+.rate-group-move{   
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+}
+
+/* progress 색상 조절 필요 */
+.rate-group-progress{
+    position: absolute;
+    left: 0;
+    right: 640px;
+    bottom: 0;
+    height: 27px;
+    background-color: blue;
+}
+
+.rate-group-line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 640px;
+    border-bottom: 1px solid white;
+}
+
+.rate-group-percent{
+    position: absolute;
+    left: 0;
+    bottom: -27px;
 }

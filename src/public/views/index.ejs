@@ -14,42 +14,7 @@
     <title>Document</title>
 
     <style>
-        .main-bot-section{
-            padding-bottom: 30px;
-        }
 
-        .user-group{
-            margin-top: 48px;
-            text-align: center;
-        }
-
-        .rate-group{
-            position: relative;
-            width: 640px;
-            height: 72px;
-            
-            margin: 32px auto 0 auto;
-        }
-
-        .rate-group-move{   
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }
-
-        .rate-group-line{
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 640px;
-            border-bottom: 1px solid white;
-        }
-
-        .rate-group-percent{
-            position: absolute;
-            left: 0;
-            bottom: -27px;
-        }
     </style>
 </head>
 <body>
@@ -90,9 +55,7 @@
                     </div>
 
                     <!-- 퍼센트에 맞게 변하는 색상 삽입 필요 -->
-                    <div class="rate-year-progress">
-
-                    </div>
+                    <div class="rate-year-progress"></div>
 
                     <div class="rate-year-line"></div>
 
@@ -126,10 +89,8 @@
                         <img src="../image/baby_rate.png" alt="" width="64px" style="vertical-align:bottom">
                     </div>
 
-                    <!-- 퍼센트에 맞게 변하는 색상 삽입 필요 -->
-                    <div class="rate-group-progress">
-
-                    </div>
+                    <!-- right 640px -> 0px percent에 맞춰 이동 -->
+                    <div class="rate-group-progress"></div>
 
                     <div class="rate-group-line"></div>
 
