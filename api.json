@@ -13,7 +13,7 @@
         }
     },
     "index":{
-        "url":"/",
+        "url":"/index",
         "method":"get",
         "response": {
             "ok": {

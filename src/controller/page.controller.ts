@@ -24,6 +24,7 @@ class PageController implements ControllerDefaultClass {
             const query:object|undefined =  req.query||'';
             const bodyType: RequestData = api.params;
             const validateResult = validator(query, bodyType);
+            console.log(validateResult);
             if(validateResult){
                 const json = await service.searchNews(query);
                 return res.status(200).json(json.items);

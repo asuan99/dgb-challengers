@@ -18,6 +18,7 @@ class RouterModule implements ModuleDefaultClass {
 
     _schema.forEach(([key, api]) => {
       let isRegistered = false;
+      console.log(api);
       if (typeof this.routeFunctions[key] === 'function') {
         app[api.method](api.url, this.routeFunctions[key](api));
         isRegistered = true;

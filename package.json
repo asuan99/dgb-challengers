@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "npx tsc && cp -r src/public build/src/public",
+    "type": "ts-node src/app.ts",
     "start": "tsc-watch --onSuccess \"node dist/src/app.js\" ",
     "prod": "NODE_ENV=production node build/src/app.js",
     "dev": "NODE_ENV=development concurrently \"npx tsc --watch\" \"nodemon -q src/app.ts\""

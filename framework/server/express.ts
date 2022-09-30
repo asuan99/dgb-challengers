@@ -19,8 +19,8 @@ class ExpressApp{
         app.use(express.urlencoded({extended:false}));
         app.use(cookieParser());
         
-        app.set('views', path.join(__dirname, '../../src/public/views'));
-        app.use(express.static(path.join(__dirname,'../../src/public')));
+        app.set('views', path.join(process.cwd(), '/src/public/views'));
+        app.use(express.static(path.join(process.cwd(),'/src/public')));
         return app;
     }
 }
