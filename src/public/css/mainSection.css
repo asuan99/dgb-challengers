@@ -71,7 +71,6 @@
 
 .target-amount{
     all: unset;
-    width: 100px;
     color: aqua;
     background: transparent;
 }

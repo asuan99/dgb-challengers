@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/semantic.css">
     <link rel="stylesheet" href="css/mainHeader.css">
     <link rel="stylesheet" href="css/mainSection.css">
+    <link rel="stylesheet" href="css/expression.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
@@ -50,8 +51,8 @@
 
         <section class="main-top-section">
             <article class="greet-user">
-                <div class="welcome-user">어서오세요, &nbsp username님!</div>
-                <div class="rate-year-font">username님의 &nbsp 올해 목표 수익률</div>
+                <div class="welcome-user">어서오세요, &nbsp <span class="text-color">username</span>님!</div>
+                <div class="rate-year-font"><span class="text-color">username</span>님의 &nbsp 올해 목표 수익률</div>
                 <div class="rate-year">
                     <!-- 현재 진행상황도에 따라 움직이는 js 동작 추가 (미완성) -->
                     <!-- left px 증가하는 형식으로 이동 -->
@@ -72,7 +73,7 @@
                 </div>
             </article>
             <aside class="portfolio">
-                <div class="user-portfolio"><span>username님의 포트폴리오</span></div>
+                <div class="user-portfolio"><span class="text-color">username</span>님의 포트폴리오</div>
                 <div class="portfolio-info"></div>
             </aside>
         </section>
@@ -80,10 +81,10 @@
         <section class="main-bot-section">
             <article>
                 <div class="user-group">
-                    <span>username님과 비슷한 목표 금액 &nbsp</span>
+                    <span class="text-color">username</span>님과 비슷한 목표 금액 &nbsp</span>
                     <input class="target-amount" type="text" value="group-target-amount" readonly>
-                    <span>을 가진 사람은 &nbsp <a href="#">group_user_count</a>명, </span>
-                    <span>이 중 목표달성률이 &nbsp<a href="#">group_user_rank</a>번째에요.</span>
+                    <span>을 가진 사람은 &nbsp <a class="text-color" href="#">group_user_count</a>명, </span>
+                    <span>이 중 목표달성률이 &nbsp<a class="text-color" href="#">group_user_rank</a>번째에요.</span>
                 </div>
 
                 <!-- 그림 아기 -> 학생 -> 어른 -> 할아버지 등 변화하는 이미지 -->
