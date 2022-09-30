@@ -65,8 +65,9 @@
 
 .portfolio-info{
     height: 324px;
+    background: conic-gradient(red, yellow, green);
     border: 1px solid white;
-    border-radius: 360px;
+    border-radius: 50%;
 }
 
 .target-amount{
