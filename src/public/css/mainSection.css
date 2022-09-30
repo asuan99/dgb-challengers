@@ -27,7 +27,7 @@
 .rate-year-move{
     position: absolute;
     left: 0;
-    bottom: 24px;
+    bottom: 12px;
 }
 
 .rate-year-progress{
@@ -35,8 +35,8 @@
     left: 0;
     right: 640px;
     bottom: 0;
-    height: 24px;
-    background-color: blue;
+    height: 12px;
+    background-color: #00a892;
 }
 
 .rate-year-line{
@@ -96,7 +96,7 @@
 .rate-group-move{   
     position: absolute;
     left: 0;
-    bottom: 24px;
+    bottom: 4px;
 }
 
 /* progress 색상 조절 필요 */
@@ -105,8 +105,8 @@
     left: 0;
     right: 640px;
     bottom: 0;
-    height: 27px;
-    background-color: blue;
+    height: 12px;
+    background-color: #00a892;
 }
 
 .rate-group-line{
