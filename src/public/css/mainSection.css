@@ -1,0 +1,68 @@
+.main-top-section{
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+.greet-user{
+    padding-top: 76px;
+    text-align: center;
+
+    display: inline-block;
+}
+
+.rate-year-font{
+    margin-top: 32px;
+}
+
+.rate-year{
+    margin-top: 32px;
+
+    position: relative;
+    width: 640px;
+    height: 72px;
+}
+
+.rate-year-move{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.rate-year-line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 640px;
+    border-bottom: 1px solid white;
+}
+
+.rate-year-percent{
+    position: absolute;
+    left: 0;
+    bottom: -27px;
+}
+
+.portfolio{
+    display: inline-block;
+    width: 324px;
+}
+
+.user-portfolio{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.portfolio-info{
+    height: 324px;
+    border: 1px solid white;
+    border-radius: 360px;
+}
+
+.target-amount{
+    all: unset;
+    width: 100px;
+    color: aqua;
+    background: transparent;
+}

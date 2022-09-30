@@ -4,69 +4,148 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tag.css">
+    <link rel="stylesheet" href="css/semantic.css">
+    <link rel="stylesheet" href="css/mainHeader.css">
+    <link rel="stylesheet" href="css/mainSection.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
 
     <style>
-        html{
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
+        .main-bot-section{
+            padding-bottom: 30px;
         }
 
-        body{
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
+        .user-group{
+            margin-top: 48px;
+            text-align: center;
         }
 
-        header{
-            width: 100%;
+        .rate-group{
+            position: relative;
+            width: 640px;
+            height: 72px;
+            
+            margin: 32px auto 0 auto;
         }
 
-        .header-profile-info{
-            display: inline-flex;
-            border: 1px solid gray;
+        .rate-group-move{   
+            position: absolute;
+            left: 0;
+            bottom: 0;
         }
 
-        .retire-image-box{
-            margin: 12px;
-            padding: 48px;
-
-            border: 1px solid black;
-            border-radius: 48px;
-            overflow: hidden;
-            background: url("../css/retire_image.jpg") no-repeat;
-            background-size: cover;
+        .rate-group-line{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 640px;
+            border-bottom: 1px solid white;
         }
 
-        .retire-comment-box{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 24px;
+        .rate-group-percent{
+            position: absolute;
+            left: 0;
+            bottom: -27px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="header-profile-info">
-            <div class="retire-image-box"></div>
-            <div class="retire-comment-box">
-                <span>은퇴, 계획하자!</span><br>
-                <span>-> 은퇴의 ㅇ</span>    
+    <!-- main banner -->
+    <main class="main-banner">
+        <!-- header -->
+        <header>
+            <div class="header">
+                <!-- logo -->
+                <div class="logo-box">
+                </div>
+                
+                <div class="search-box">
+                    <input type="search" name="search_query" placeholder="검색어 입력">
+                </div>
+    
+                <!-- gnb -->
+                <div class="gnb">
+                    <div class="gnb-item">뉴스</div>
+                    <div class="gnb-item">랭킹</div>
+                    <div class="gnb-item">커뮤니티</div>
+                    <div class="gnb-item">고객센터</div>
+                    <div class="gnb-item">로그인</div>
+                </div>
             </div>
-        </div>
+        </header>
 
-        <div class="header-menu">
+        <section class="main-top-section">
+            <article class="greet-user">
+                <div class="welcome-user">어서오세요, &nbsp username님!</div>
+                <div class="rate-year-font">username님의 &nbsp 올해 목표 수익률</div>
+                <div class="rate-year">
+                    <!-- 현재 진행상황도에 따라 움직이는 js 동작 추가 (미완성) -->
+                    <!-- left px 증가하는 형식으로 이동 -->
+                    <!-- 달리고 있는 img 파일로 대체 -->
+                    <div class="rate-year-move">
+                        <img src="../image/car_rate.png" alt="" width="64px" style="vertical-align:bottom">
+                    </div>
 
-        </div>
-    </header>
+                    <!-- 퍼센트에 맞게 변하는 색상 삽입 필요 -->
+                    <div class="rate-year-progress">
 
+                    </div>
+
+                    <div class="rate-year-line"></div>
+
+                    <!-- 퍼센트 위치도 위 이미지의 위치에 맞게 변경 필요 -->
+                    <div class="rate-year-percent">
+                        0%
+                    </div>
+                </div>
+            </article>
+            <aside class="portfolio">
+                <div class="user-portfolio"><span>username님의 포트폴리오</span></div>
+                <div class="portfolio-info"></div>
+            </aside>
+        </section>
+
+        <section class="main-bot-section">
+            <article>
+                <div class="user-group">
+                    <span>username님과 비슷한 목표 금액 &nbsp</span>
+                    <input class="target-amount" type="text" value="group-target-amount" readonly>
+                    <span>을 가진 사람은 &nbsp <a href="#">group_user_count</a>명, </span>
+                    <span>이 중 목표달성률이 &nbsp<a href="#">group_user_rank</a>번째에요.</span>
+                </div>
+
+                <!-- 그림 아기 -> 학생 -> 어른 -> 할아버지 등 변화하는 이미지 -->
+                <div class="rate-group">
+                    <!-- 현재 진행상황도에 따라 움직이는 js 동작 추가 (미완성) -->
+                    <!-- left px 증가하는 형식으로 이동 -->
+                    <!-- 달리고 있는 img 파일로 대체 -->
+                    <div class="rate-group-move">
+                        <img src="../image/baby_rate.png" alt="" width="64px" style="vertical-align:bottom">
+                    </div>
+
+                    <!-- 퍼센트에 맞게 변하는 색상 삽입 필요 -->
+                    <div class="rate-group-progress">
+
+                    </div>
+
+                    <div class="rate-group-line"></div>
+
+                    <!-- 퍼센트 위치도 위 이미지의 위치에 맞게 변경 필요 -->
+                    <div class="rate-group-percent">0%</div>
+                </div>
+            </article>    
+        </section>
+    </main>
+
+    <!-- sub section -->
     <section>
+        <!-- section 2 -->
 
+        <!-- section 3-->
+        
+        <!-- section 4 -->
     </section>
-</body>
 </html>
