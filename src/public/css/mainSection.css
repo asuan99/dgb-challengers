@@ -65,8 +65,8 @@
 
 .portfolio-info{
     height: 324px;
-    background: conic-gradient(red, yellow, green);
-    border: 1px solid white;
+    background: conic-gradient(red 12%, orange 12% 24%,yellow 24% 46%, green 46% 70%, blue 70% 100%);
+    border: 1px solid #ccc;
     border-radius: 50%;
 }
 
