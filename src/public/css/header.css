@@ -15,7 +15,7 @@
     display: inline-block;
     padding: 24px;
     border: 1px solid gray;
-    border-radius: 36px;
+    border-radius: 50%;
 
     background: url('../image/retire_image.jpg');
     background-size: cover;

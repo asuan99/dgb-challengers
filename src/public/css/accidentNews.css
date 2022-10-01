@@ -1,0 +1,70 @@
+.major-accident{
+    height: 760px;
+    background: transparent url("../image/accident_background.jpg") no-repeat;
+    color: white;
+}
+
+.major-accident-title{
+    text-align: center;
+    padding-top: 128px;
+    font-size: 76px;
+    margin-bottom: 96px;
+}
+
+.major-accident-indicator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 144px;
+}
+
+.accident-news-date {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.accident-news-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 32px;
+}
+
+.major-accident-line{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    margin-bottom: 8px;
+
+    position: relative;
+}
+
+.accident-btn{
+    padding: 3px;
+    border-radius: 50%;
+
+    margin: 0 16px;
+    
+    position: relative;
+    bottom: -5px;
+    cursor: pointer;
+}
+
+.accident-btn:nth-child(even) {
+    background: white;
+    border: 1px solid white;
+}
+
+.accident-btn:nth-child(odd){
+    border: 1px solid red;
+    background: red;
+}
+
+.major-accident-separate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 18px;
+}
