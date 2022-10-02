@@ -4,7 +4,7 @@
 
 #scrollTopBtn{
     display: inline-block;
-    position: sticky;
+    position: fixed;
     border: 1px solid #ccc;
     border-radius: 30px;
     padding: 10px;
