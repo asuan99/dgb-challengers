@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/mainSection.css">
     <link rel="stylesheet" href="css/accidentNews.css">
     <link rel="stylesheet" href="css/retirementInfo.css">
+    <link rel="stylesheet" href="css/modal.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +45,8 @@
                         <div class="gnb-item">랭킹</div>
                         <div class="gnb-item">커뮤니티</div>
                         <div class="gnb-item">고객센터</div>
-                        <div class="gnb-item">로그인</div>
+                        <div class="gnb-item js-login">로그인</div>
+                        <div class="gnb-item js-logout none">로그아웃</div>
                     </div>
                 </div>
             </header>
@@ -235,9 +237,79 @@
             
         </section>
 
+        <div class="js-modal none">
+            <div class="modal-content">
+                <div class="modal-logo">
+                    Logo 사진 예정
+                    <button class="js-modal-close">
+                        <img src="https://icons-for-free.com/iconfiles/png/512/CLOSE-131994911256789607.png" alt="" width="24px">
+                    </button>
+                </div>
+                <div class="select-content">
+                    <div class="modal-signIn clicked-mode">
+                        <button id="signIn" onclick="clickSign(this)">로그인</button>
+                    </div>
+                    <div class="modal-signUp">
+                        <button id="signUp" onclick="clickSign(this)">회원가입</button>
+                    </div>
+                </div>
+                <div class="select-bar" style="position: relative; left: 0;"></div>
+                <form class="modal-signIn-content action="" method="post">
+                    <div class="signIn-box">
+                        <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-email-vector-icon-png-image_4279324.jpg" alt="" width="32px" style="vertical-align: middle">
+                        <input type="text" name="user_id" placeholder="아이디를 입력해주세요.">
+                    </div>
+                    <div class="signIn-box">
+                        <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-email-vector-icon-png-image_4279324.jpg" alt="" width="32px" style="vertical-align: middle">
+                        <input type="text" name="user_password" placeholder="패스워드를 입력해주세요.">   
+                    </div>
+                    <input type="checkbox"> 기억
+
+                    <div class="submit-signIn">
+                        <input type="submit" value="로그인">
+                    </div>
+                </form>
+                <form class="modal-signUp-content none">
+                    <div class="signUp-box">
+                        <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-email-vector-icon-png-image_4279324.jpg" alt="" width="32px" style="vertical-align: middle">
+                        <input type="text" name="user_id" placeholder="아이디를 입력해주세요.">
+                    </div>
+                    <div class="signUp-box">
+                        <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-email-vector-icon-png-image_4279324.jpg" alt="" width="32px" style="vertical-align: middle">
+                        <input type="text" name="user_email" placeholder="이메일을 입력해주세요.">
+                    </div>
+                    <div class="signUp-box">
+                        <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-email-vector-icon-png-image_4279324.jpg" alt="" width="32px" style="vertical-align: middle">
+                        <input type="password" name="user_password" placeholder="비밀번호를 입력해주세요.">
+                    </div>
+                    <div class="signUp-box">
+                        <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-email-vector-icon-png-image_4279324.jpg" alt="" width="32px" style="vertical-align: middle">
+                        <input type="text" value="data.access_token" readonly>
+                    </div>
+                    <div class="signUp-box">
+                        <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-email-vector-icon-png-image_4279324.jpg" alt="" width="32px" style="vertical-align: middle">
+                        <input type="text" value="data.refresh_token" readonly>
+                    </div>
+                    <div class="signUp-box">
+                        <img src="https://png.pngtree.com/png-clipart/20190516/original/pngtree-email-vector-icon-png-image_4279324.jpg" alt="" width="32px" style="vertical-align: middle">
+                        <input type="text" value="data.user_seq_no" readonly>
+                    </div>
+
+                    <div class="submit-auth">
+                        <button class="auth-for-signup">인증받기</button>
+                    </div>
+                    <div class="submit-signUp">
+                        <input type="submit" value="가입하기">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="overlay none"></div>
+
         <button id="scrollTopBtn" style="visibility: hidden;"><a href="#header">TOP</a></button>
     </div>
 
     <script src="js/topMove.js"></script>
-    <script src="js/accidentBtn.js"></script>
+    <script src="js/loadAccident.js"></script>
+    <script src="js/modal.js"></script>
 </html>

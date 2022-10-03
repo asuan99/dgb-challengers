@@ -41,7 +41,11 @@ input[type=search] {
 }
 
 .gnb-item{
-    font-size: 18px;
+    font-size: 15px;
     color: white;
     cursor: pointer;   
+}
+
+.js-login, .js-logout{
+    padding-right: 64px;
 }

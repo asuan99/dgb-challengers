@@ -1,0 +1,126 @@
+.modal-content{
+    z-index: 202;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 368px;
+
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.modal-logo{
+    position: relative;
+
+    height: 64px;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.js-modal-close{
+    position: absolute;
+
+    top: 8px;
+    right: 6px;
+    
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.js-modal-close:hover{
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+.select-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-signIn, .modal-signUp{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 18px;
+    margin: 0 8px;
+}
+
+#signIn, #signUp{
+    all: unset;
+    cursor: pointer;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 201;
+    overflow: hidden;
+}
+
+.signIn-box {
+    padding: 3px 8px;
+    width: 100%;
+    border: none;
+    margin: 16px 0;
+}
+
+.signIn-box>input[type=text] {
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 20px 0;
+    padding-inline-start: 5px;
+    font-size: 20px;
+}
+
+.submit-signIn, .submit-signUp {
+    margin-top: 32px;
+    padding: 8px 0;
+    text-align: center;
+    border-top: 1px solid gray;
+}
+
+.submit-signIn>input, .submit-signUp>input{
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.signUp-box {
+    padding: 3px 8px;
+    width: 100%;
+    border: none;
+    margin: 16px 0;
+}
+
+.signUp-box>input{
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 10px 0;
+    padding-inline-start: 5px;
+    font-size: 20px;
+}
+
+.submit-auth{
+    text-align: center;
+}
+
+.auth-for-signup{
+    padding: 8px 16px;
+}

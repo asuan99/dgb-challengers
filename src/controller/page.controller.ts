@@ -26,17 +26,23 @@ class PageController implements ControllerDefaultClass {
         }
     }
 
-
-
     private index(api:RouterApiSpec){
         return async (req:express.Request,res:express.Response)=>{
-            res.render('index');
+            res.render('indexPage');
         }
     }
+
+    private userIndex(api:RouterApiSpec) {
+        return async (req:express.Request, res:express.Response) => {
+            res.render('userPage');
+        }
+    }
+
     get default() {
         return {
             searchNews: this.searchNews,
             index : this.index,
+            userIndex : this.userIndex,
         }
     }
 }
