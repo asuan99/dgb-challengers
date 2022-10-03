@@ -10,14 +10,7 @@ import createHttpError from 'http-errors';
 class PageController implements ControllerDefaultClass {
     constructor() { };
     
-    
-    /**
-     * @description Naver API를 이용한 뉴스 검색 함수 입니다.
-     * 참고 link :  https://developers.naver.com/docs/serviceapi/search/news/news.md
-     * TODO:
-     * query가 들어왔는지 확인해야 합니다.
-     * @returns
-     */
+
     private searchNews(api: RouterApiSpec) {
         const service = new PageService().default;
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {

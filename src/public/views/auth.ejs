@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+<body>
+    <button id = "authBtn">버튼</button>
+    <script>
+        $("#authBtn").click(function(){
+            var tmpWindow = window.open('about:blank')
+            tmpWindow.location = 
+        "https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=a191501e-0956-4b9c-8210-9dac7a8294aa&redirect_uri=http://localhost:3000/financial/auth/callback&scope=login inquiry&state=b80BLsfigm9OokPTjy03elbJqRHOfGSY&auth_type=0"
+        
+        })
+            
+            // "https://testapi.openbanking.or.kr/oauth/2.0/authorize?" +
+            // "response_type=code&"+"client_id=a191501e-0956-4b9c-8210-9dac7a8294aa&"
+            // +"redirect_uri=http://localhost:3000/financial/auth/callback&"+
+            // "scope=login&"+"state=b80BLsfigm9OokPTjy03elbJqRHOfGSY&"+"auth_type=0"
+
+    </script>
+
+
+
+
+</body>
+</html>

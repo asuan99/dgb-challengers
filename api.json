@@ -21,5 +21,29 @@
                 "json": {}
             }
         }
+    },
+    "authPage":{
+        "url":"/financial/auth/",
+        "method":"get"
+    },
+    "authorize":{
+        "url":"/financial/auth/remove",
+        "method":"get",
+        "response": {
+            "ok": {
+                "statusCode": 200,
+                "json": {}
+            }
+        }
+    },
+    "authorize_callback":{
+        "url":"/financial/auth/callback",
+        "method":"get",
+        "response": {
+            "ok": {
+                "statusCode": 200,
+                "json": {}
+            }
+        }
     }
 }

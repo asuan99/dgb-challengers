@@ -4,7 +4,7 @@ import path from 'path';
 
 import Framework from '../framework';
 import { ErrorBoundaryModule, RouterModule } from '../framework/modules';
-import { PageController } from './controller';
+import { AuthController, PageController } from './controller';
 import './util/env';
 
 // const {MONGO_ID, MONGO_PW,MONGO_OPTION} = process.env;
@@ -27,6 +27,7 @@ const framework = new Framework({
                 
                 path: path.join(process.cwd(),'/api.json'), routeFunctions: {
                     ...(new PageController()).default,
+                    ...(new AuthController()).default,
                 }
             }),
             errorBoundary: new ErrorBoundaryModule(),

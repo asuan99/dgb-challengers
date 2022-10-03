@@ -1,3 +1,3 @@
 import PageService from "./page.service";
-
-export { PageService };
+import AuthService from "./auth.service";
+export { PageService ,AuthService};
