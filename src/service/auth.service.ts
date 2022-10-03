@@ -1,6 +1,10 @@
 import axios from 'axios';
-import { response } from 'express';
+
 import createHttpError from 'http-errors';
+import QueryString from 'qs';
+import request from 'request';
+
+
 
 class AuthService {
     constructor() { }
@@ -14,11 +18,16 @@ class AuthService {
             'client_secret': process.env.FINANCIAL_SECRET_KEY,
         }
         const header = {
-            'Content-Type':'application/x-www-form-urlencoded'
+            'content-Type':'application/x-www-form-urlencoded'
         }
-        const token = await axios.post('https://testapi.openbanking.or.kr/oauth/2.0/token',
-            data,{headers:header})
-        console.log(token); 
+        const json = await axios.post("https://testapi.openbanking.or.kr/oauth/2.0/token",QueryString.stringify(data),{
+            headers:header
+        })
+        return json.data;
+        
+        // const token = await axios.post('https://testapi.openbanking.or.kr/oauth/2.0/token',
+        //     data,{headers:header})
+        //console.log(token); 
     }
 
     get default() {

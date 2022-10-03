@@ -9,6 +9,7 @@
     </head>
 <body>
     <button id = "authBtn">버튼</button>
+    <button id = "authBtn">로그인</button>
     <script>
         $("#authBtn").click(function(){
             var tmpWindow = window.open('about:blank')
@@ -16,15 +17,15 @@
         "https://testapi.openbanking.or.kr/oauth/2.0/authorize?response_type=code&client_id=a191501e-0956-4b9c-8210-9dac7a8294aa&redirect_uri=http://localhost:3000/financial/auth/callback&scope=login inquiry&state=b80BLsfigm9OokPTjy03elbJqRHOfGSY&auth_type=0"
         
         })
-            
             // "https://testapi.openbanking.or.kr/oauth/2.0/authorize?" +
             // "response_type=code&"+"client_id=a191501e-0956-4b9c-8210-9dac7a8294aa&"
             // +"redirect_uri=http://localhost:3000/financial/auth/callback&"+
             // "scope=login&"+"state=b80BLsfigm9OokPTjy03elbJqRHOfGSY&"+"auth_type=0"
-
     </script>
-
-
+    <script>
+        console.log(document.cookie);
+    </script>
+    
 
 
 </body>

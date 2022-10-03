@@ -30,8 +30,9 @@ class AuthController implements ControllerDefaultClass {
         const service = new AuthService().default;
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {
             const code:string|undefined = String(req.query.code)||'';
-            const json:any = await service.authorize(code);
-              
+            const data:any = await service.authorize(code);
+            res.cookie('access_token',data.access_token);
+            res.render('auth');
         }
     }
 
