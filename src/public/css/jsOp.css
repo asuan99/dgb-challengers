@@ -1,0 +1,24 @@
+.text-color{
+    color: aqua;
+}
+
+#scrollTopBtn{
+    display: inline-block;
+    position: fixed;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+    bottom: 30px;
+    left: 2%;
+    cursor: pointer;
+}
+
+
+#scrollToBtn>*{
+    color: white;
+}
+
+#scrollTopBtn:hover {
+    background: rgba(128, 128, 128, 0.3);
+}

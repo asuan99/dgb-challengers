@@ -1,0 +1,47 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-box{
+    display: inline-flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.logo-bg{
+    display: inline-block;
+    padding: 24px;
+    border: 1px solid gray;
+    border-radius: 50%;
+
+    background: url('../image/retire_image.jpg');
+    background-size: cover;
+}
+
+.logo-detail{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+input[type=search] {
+    width: 272px;
+    height: 32px;
+    padding-inline-start: 16px;
+}
+
+.gnb{
+    display: flex;
+    gap: 108px;
+}
+
+.gnb-item{
+    font-size: 18px;
+    color: white;
+    cursor: pointer;   
+}

@@ -4,69 +4,240 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/tag.css">
+    <link rel="stylesheet" href="css/jsOp.css">
+    <link rel="stylesheet" href="css/semantic.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/mainSection.css">
+    <link rel="stylesheet" href="css/accidentNews.css">
+    <link rel="stylesheet" href="css/retirementInfo.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <title>Document</title>
-
-    <style>
-        html{
-            width: 100%;
-            height: 100%;
-            box-sizing: border-box;
-        }
-
-        body{
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        header{
-            width: 100%;
-        }
-
-        .header-profile-info{
-            display: inline-flex;
-            border: 1px solid gray;
-        }
-
-        .retire-image-box{
-            margin: 12px;
-            padding: 48px;
-
-            border: 1px solid black;
-            border-radius: 48px;
-            overflow: hidden;
-            background: url("../css/retire_image.jpg") no-repeat;
-            background-size: cover;
-        }
-
-        .retire-comment-box{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 24px;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="header-profile-info">
-            <div class="retire-image-box"></div>
-            <div class="retire-comment-box">
-                <span>은퇴, 계획하자!</span><br>
-                <span>-> 은퇴의 ㅇ</span>    
-            </div>
-        </div>
+    <div id="wrapper">
+        <!-- main banner -->
+        <main class="main-banner">
+            <!-- header -->
+            <header>
+                <div class="header">
+                    <!-- logo (미완성, 로고 사진 및 멘트 수정) -->
+                    <div class="logo-box">
+                        <div class="logo-bg">
+                        </div>
+                        <div class="logo-detail">
+                            <span>은퇴 계획하자</span>
+                            <span>=> 은퇴의 O</span>
+                        </div>
+                    </div>
+                    
+                    <div class="search-box">
+                        <input type="search" name="search_query" placeholder="검색어 입력">
+                    </div>
+        
+                    <!-- gnb (미완성, 카테고리명 수정)-->
+                    <div class="gnb">
+                        <div class="gnb-item">뉴스</div>
+                        <div class="gnb-item">랭킹</div>
+                        <div class="gnb-item">커뮤니티</div>
+                        <div class="gnb-item">고객센터</div>
+                        <div class="gnb-item">로그인</div>
+                    </div>
+                </div>
+            </header>
 
-        <div class="header-menu">
+            <!-- 올해 목표 수익률 -->
+            <section class="main-top-section">
+                <article class="greet-user">
+                    <div class="welcome-user">어서오세요, &nbsp <span class="text-color">이원호</span>님!</div>
+                    <div class="rate-year-font"><span class="text-color">이원호</span>님의 &nbsp 올해 목표 수익률</div>
+                    <!-- 목표 수익률 progress bar (미완성, js 동작 추가 필요) -->
+                    <div class="rate-year">
+                        <!-- 현재 진행상황도에 따라  left px 증가하는 형식으로 이동 (img 파일, ex 자동차)-->
+                        <div class="rate-year-move">
+                            <img src="../image/car_rate.png" alt="" width="64px" style="vertical-align:bottom">
+                        </div>
 
-        </div>
-    </header>
+                        <!-- 퍼센트에 맞게 변하는 색상 삽입 필요 -->
+                        <div class="rate-year-progress"></div>
 
-    <section>
+                        <div class="rate-year-line"></div>
 
-    </section>
-</body>
+                        <!-- 퍼센트 값, 위치도 위 이미지의 위치에 맞게 변경 필요 -->
+                        <div class="rate-year-percent">
+                            0%
+                        </div>
+                    </div>
+                </article>
+                <aside class="portfolio">
+                    <div class="user-portfolio"><span class="text-color">이원호</span>님의 포트폴리오</div>
+                    <div class="portfolio-info"></div>
+                </aside>
+            </section>
+
+            <!-- 그룹내 목표 달성률 -->
+            <section class="main-bot-section">
+                <article>
+                    <div class="user-group">
+                        <span class="text-color">이원호</span>님과 비슷한 목표 금액 &nbsp</span>
+                        <span class="text-color">10-50억</span>
+                        <span>을 가진 사람은 &nbsp <a class="text-color" href="#">127</a>명, </span>
+                        <span>이 중 목표달성률이 &nbsp<a class="text-color" href="#">12</a>번째에요.</span>
+                    </div>
+
+                    <!-- 그룹내 목표 달성률 progress bar(미완성, js 동작 추가) -->
+                    <div class="rate-group">
+                        <!-- 현재 진행상황도에 따라 left px 증가하는 형식으로 이동 -->
+                        <!-- 그림 아기 -> 학생 -> 어른 -> 할아버지 등 변화하는 이미지 -->
+                        <div class="rate-group-move">
+                            <img src="../image/baby_rate.png" alt="" width="64px" style="vertical-align:bottom">
+                        </div>
+
+                        <!-- right 640px -> 0px percent에 맞춰 이동 -->
+                        <div class="rate-group-progress"></div>
+
+                        <div class="rate-group-line"></div>
+
+                        <!-- 퍼센트 위치도 위 이미지의 위치에 맞게 변경 필요 -->
+                        <div class="rate-group-percent">0%</div>
+                    </div>
+                </article>    
+            </section>
+        </main>
+
+        <!-- 연간 금융관련 대형 사건 사고 -->
+        <section class="major-accident">
+            <article>
+                <div class="major-accident-title">
+                    <span>주요 증시 뉴스</span>
+                </div>
+
+                <div class="major-accident-indicator">
+                    <div class="accident-news-date">
+                        <span class="text-color">2021.10</span> 주요 증시뉴스
+                    </div>
+                    <div class="accident-news-content">
+                        <div class="accdient-news-items">
+                            <ul>
+                                <li>뉴욕증시, 연준 물가 상승에 ... 다우 1.71%↓ 마감 [월가월부..</li>
+                                <li>'9월은 잔인한 달' ... 뉴욕증시, 1~9월 하락률 20년만에 최..</li>
+                                <li>뉴욕증시, 연준 선호 물가 상승에 혼조세로 출발</li>
+                                <li>아시아 증시, 이달 하락폭 코로나19 이후 최대</li>
+                                <li>비트코인 50만 달러 가나?</li>
+                            </ul>
+                        </div>
+                        <div class="accdient-news-items">
+                            <ul>
+                                <li>뉴욕증시, 연준 물가 상승에 ... 다우 1.71%↓ 마감 [월가월부..</li>
+                                <li>'9월은 잔인한 달' ... 뉴욕증시, 1~9월 하락률 20년만에 최..</li>
+                                <li>뉴욕증시, 연준 선호 물가 상승에 혼조세로 출발</li>
+                                <li>아시아 증시, 이달 하락폭 코로나19 이후 최대</li>
+                                <li>비트코인 50만 달러 가나?</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 글 박스와 버튼을 표시 -->
+                    <div class="major-accident-line">
+                        <div class="major-accident-btn-box">
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                        </div>
+                    </div>
+
+                    <!-- 1년을 기준으로 표시(미완성, JS 처리 필요) -->
+                    <div class="major-accident-separate">
+                        <div id="accident01">21.10</div>
+                        <div id="accident02">21.11</div>
+                        <div id="accident03">21.12</div>
+                        <div id="accident04">22.01</div>
+                        <div id="accident05">22.02</div>
+                        <div id="accident06">22.03</div>
+                        <div id="accident07">22.04</div>
+                        <div id="accident08">22.05</div>
+                        <div id="accident09">22.06</div>
+                        <div id="accident10">22.07</div>
+                        <div id="accident11">22.08</div>
+                        <div id="accident12">22.09</div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- 은퇴계산기 관련 정보 -->
+        <section class="retirement-info-section">
+            <article>
+                <!-- 은퇴자들의 노하우 공유 게시글 -->
+                <div class="retirement-shared-info">
+                    <div class="retirement-shared-info-title">
+                        <span>은퇴한 사람들의 노하우를 공유해드려요!</span>
+                    </div>
+                    <div class="retirement-user-post">
+                        <!-- 커뮤니티에 작성된 글을 당겨옴 -->
+                        <div class="user-know-how">
+                            <a href="">코인으로 인생 졸업하는 초 간단 방법 - 강병준</a>
+                        </div>
+                        <div class="user-know-how">
+                            <a href="">졸업기념 매매방식 공유 (내용추가) - 이영수</a>
+                        </div>
+                        <div class="user-know-how">
+                            <a href="">비트코인 졸업자의 글 - 이원호</a>
+                        </div>
+                        <div class="user-know-how">
+                            <a href="">졸업기념 매매방식 공유 - 권용문</a>
+                        </div>
+                        <div class="user-know-how">
+                            <a href="">졸업기념 매매방식 공유 - 황현동</a>
+                        </div>
+                    </div>
+                    <div class="retirement-user-post-more">
+                        <a href="">더 보기</a>
+                    </div>
+                </div>
+            </article>
+
+            <article>
+                <!-- 은퇴 계산기를 바탕으로의 정보 제시 -->
+                <div class="retirement-user-info">
+                    은퇴까지 연간 <span class="text-color">rate_of_return</span>%의 수익률을 달성하면
+                    월 <span class="text-color">cost_of_month</span>원 생활비를 사용할 수 있어요.
+                    <ul>
+                        <li>소비자물가 상승률 <span class="text-color">inflation rate</span>%</li>
+                        <li>국고채 3년을 평균 금리 <span class="text-color">sovereign_yield</span>%</li>
+                        <li>은퇴까지 <span class="text-color">retirement_year</span>년 남았어요.</li>
+                        <li>보유자산 <span class="text-color">user_holdings</span>원 있어요.</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+
+        <!-- 현재 금융 정보 -->
+        <section>
+            <article>
+                
+            </article>
+        </section>
+
+        <!-- 현재 경제 핫 키워드 -->
+        <section>
+            
+        </section>
+
+        <button id="scrollTopBtn" style="visibility: hidden;"><a href="#header">TOP</a></button>
+    </div>
+
+    <script src="js/topMove.js"></script>
+    <script src="js/accidentBtn.js"></script>
 </html>
