@@ -30,9 +30,7 @@ header{
     color: white;
 }
 
-.user-interface{
-    background: transparent url("../image/accident_background.jpg") no-repeat;
-    
+.user-interface{    
     width: 100vw;
     height: 100vh;
 }

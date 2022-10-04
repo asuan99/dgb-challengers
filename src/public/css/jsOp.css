@@ -27,6 +27,10 @@
     display: none !important;
 }
 
+.show{
+    display: block !important;
+}
+
 .clicked-mode{
     color: #00a892;
 }

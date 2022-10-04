@@ -29,26 +29,64 @@
 
                 <!-- user interface -->
                 <div class="category">
-                    <div class="mypage-btn clicked-item">
-                        <img src="" alt="">
-                        <button class="clicked-item">마이페이지</button>
-                        <div class="">
-                            <button>프로필 수정</button>
-                            <button>계정 관리</button>
-                            <button>포트폴리오 관리</button>
+                    <!-- mypage -->
+                    <div class="category-mypage-box">
+                        <div class="category-content">
+                            <div class="category-title">
+                                <span class="title">마이페이지</span>
+                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
+                            </div>
+                            <div class="category-more show">
+                                <div class="category-item clicked-item" id="portfolio_register">포트폴리오 등록</div>
+                                <div class="category-item" id="profile_update">프로필 수정</div>
+                                <div class="category-item" id="account_manage">계정 관리</div>
+                                <div class="category-item" id="account_remove">계정 탈퇴</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="retirement-btn">
-                        <img src="" alt="">
-                        <button>은퇴계산기</button>
+
+                    <!-- retirement -->
+                    <div class="category-retirement--box">
+                        <div class="category-content">
+                            <div class="category-title">
+                                <span class="title">은퇴계산기</span>
+                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
+                            </div>
+                            <div class="category-more">
+                                <div class="category-item" id="retirement_input">은퇴계산기 입력</div>
+                                <div class="category-item" id="annual_return">연간 수익률</div>
+                                <div class="category-item" id="lognterm_return">장기 수익률</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="portfolio-btn">
-                        <img src="" alt="">
-                        <button>포트폴리오</button>
+
+                    <!-- portfolio -->
+                    <div class="category-portfolio-box">
+                        <div class="category-content">
+                            <div class="category-title">
+                                <span class="title">포트폴리오</span>
+                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
+                            </div>
+                            <div class="category-more">
+                                <div class="category-item" id="my_portfolio">내 포트폴리오</div>
+                                <div class="category-item" id="comparison_portfolio">포트폴리오 비교</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="news-btn">
-                        <img src="" alt="">
-                        <button>뉴스</button>
+
+                    <!-- news -->
+                    <div class="category-news-box">
+                        <div class="category-content">
+                            <div class="category-title">
+                                <span class="title">증시 뉴스</span>
+                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
+                            </div>
+                            <div class="category-more">
+                                <div class="category-item" id="main_news">주요 증시 뉴스</div>
+                                <div class="category-item" id="korea_news">한국 증시 뉴스</div>
+                                <div class="category-item" id="us_news">미국 증시 뉴스</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -58,6 +96,8 @@
                 </div>
             </div>
         </main>
+
+        <script src="js/snbLoading.js"></script>
     </div>
 
     <!-- 올해 목표 수익률 -->
