@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="css/snb.css">
     <link rel="stylesheet" href="css/mainContent.css">
     <link rel="stylesheet" href="css/section1.css">
-    <link rel="stylesheet" href="css/accidentNews.css">
     <link rel="stylesheet" href="css/retirementInfo.css">
+
+    <link rel="stylesheet" href="css/mainNews.css">
     <link rel="stylesheet" href="css/jsOp.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -99,7 +101,7 @@
         <main class="main-content">
             <!-- mypage -->
             <!-- portfolio_register -->
-            <section id="portfolio_register_content" class="user-content show">
+            <section id="portfolio_register_content" class="user-content">
                 portfolio_register
             </section>
 
@@ -148,8 +150,82 @@
 
             <!-- news -->
             <!-- main_news -->
-            <section id="main_news_content" class="user-content">
-                main_news
+            <section id="main_news_content" class="user-content show">
+                <article class="major-accident">
+                    <div class="major-accident-title">
+                        <span>주요 증시 뉴스</span>
+                    </div>
+
+                    <div class="major-accident-indicator">
+                        <div class="accident-news-date">
+                            <span class="text-color">2021.10</span> 주요 증시뉴스
+                        </div>
+                        <div class="accident-news-content">
+                            <div class="accdient-news-items">
+                                <ul>
+                                    <li>뉴욕증시, 연준 물가 상승에 ... 다우 1.71%↓ 마감 [월가월부..</li>
+                                    <li>'9월은 잔인한 달' ... 뉴욕증시, 1~9월 하락률 20년만에 최..</li>
+                                    <li>뉴욕증시, 연준 선호 물가 상승에 혼조세로 출발</li>
+                                    <li>아시아 증시, 이달 하락폭 코로나19 이후 최대</li>
+                                    <li>비트코인 50만 달러 가나?</li>
+                                </ul>
+                            </div>
+                            <div class="accdient-news-items">
+                                <ul>
+                                    <li>뉴욕증시, 연준 물가 상승에 ... 다우 1.71%↓ 마감 [월가월부..</li>
+                                    <li>'9월은 잔인한 달' ... 뉴욕증시, 1~9월 하락률 20년만에 최..</li>
+                                    <li>뉴욕증시, 연준 선호 물가 상승에 혼조세로 출발</li>
+                                    <li>아시아 증시, 이달 하락폭 코로나19 이후 최대</li>
+                                    <li>비트코인 50만 달러 가나?</li>
+                                </ul>
+                            </div>
+                            <div class="accdient-news-items">
+                                <ul>
+                                    <li>뉴욕증시, 연준 물가 상승에 ... 다우 1.71%↓ 마감 [월가월부..</li>
+                                    <li>'9월은 잔인한 달' ... 뉴욕증시, 1~9월 하락률 20년만에 최..</li>
+                                    <li>뉴욕증시, 연준 선호 물가 상승에 혼조세로 출발</li>
+                                    <li>아시아 증시, 이달 하락폭 코로나19 이후 최대</li>
+                                    <li>비트코인 50만 달러 가나?</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 라인을 표시 -->
+                        <div class="major-accident-line"></div>
+
+                        <!-- 버튼 표시 -->
+                        <div class="major-accident-btn-box">
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                            <button class="accident-btn"></button>
+                        </div>
+
+                        <!-- 1년을 기준으로 표시(미완성, JS 처리 필요) -->
+                        <div class="major-accident-separate">
+                            <div id="accident01">21.10</div>
+                            <div id="accident02">21.11</div>
+                            <div id="accident03">21.12</div>
+                            <div id="accident04">22.01</div>
+                            <div id="accident05">22.02</div>
+                            <div id="accident06">22.03</div>
+                            <div id="accident07">22.04</div>
+                            <div id="accident08">22.05</div>
+                            <div id="accident09">22.06</div>
+                            <div id="accident10">22.07</div>
+                            <div id="accident11">22.08</div>
+                            <div id="accident12">22.09</div>
+                        </div>
+                    </div>
+                </article>
             </section>
 
             <!-- korea_news -->
@@ -164,6 +240,7 @@
         </main>
 
         <script src="js/snbLoading.js"></script>
+        <script src="js/loadAccident.js"></script>
     </div>
 
     <!-- 올해 목표 수익률 -->
@@ -223,74 +300,6 @@
             </div>
         </article>    
     </section>
-
-    <!-- 연간 금융관련 대형 사건 사고 -->
-    <section class="major-accident none">
-        <article>
-            <div class="major-accident-title">
-                <span>주요 증시 뉴스</span>
-            </div>
-
-            <div class="major-accident-indicator">
-                <div class="accident-news-date">
-                    <span class="text-color">2021.10</span> 주요 증시뉴스
-                </div>
-                <div class="accident-news-content">
-                    <div class="accdient-news-items">
-                        <ul>
-                            <li>뉴욕증시, 연준 물가 상승에 ... 다우 1.71%↓ 마감 [월가월부..</li>
-                            <li>'9월은 잔인한 달' ... 뉴욕증시, 1~9월 하락률 20년만에 최..</li>
-                            <li>뉴욕증시, 연준 선호 물가 상승에 혼조세로 출발</li>
-                            <li>아시아 증시, 이달 하락폭 코로나19 이후 최대</li>
-                            <li>비트코인 50만 달러 가나?</li>
-                        </ul>
-                    </div>
-                    <div class="accdient-news-items">
-                        <ul>
-                            <li>뉴욕증시, 연준 물가 상승에 ... 다우 1.71%↓ 마감 [월가월부..</li>
-                            <li>'9월은 잔인한 달' ... 뉴욕증시, 1~9월 하락률 20년만에 최..</li>
-                            <li>뉴욕증시, 연준 선호 물가 상승에 혼조세로 출발</li>
-                            <li>아시아 증시, 이달 하락폭 코로나19 이후 최대</li>
-                            <li>비트코인 50만 달러 가나?</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- 글 박스와 버튼을 표시 -->
-                <div class="major-accident-line">
-                    <div class="major-accident-btn-box">
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                        <button class="accident-btn"></button>
-                    </div>
-                </div>
-
-                <!-- 1년을 기준으로 표시(미완성, JS 처리 필요) -->
-                <div class="major-accident-separate">
-                    <div id="accident01">21.10</div>
-                    <div id="accident02">21.11</div>
-                    <div id="accident03">21.12</div>
-                    <div id="accident04">22.01</div>
-                    <div id="accident05">22.02</div>
-                    <div id="accident06">22.03</div>
-                    <div id="accident07">22.04</div>
-                    <div id="accident08">22.05</div>
-                    <div id="accident09">22.06</div>
-                    <div id="accident10">22.07</div>
-                    <div id="accident11">22.08</div>
-                    <div id="accident12">22.09</div>
-                </div>
-            </div>
-        </article>
-    </section>
     
     <!-- 은퇴계산기 관련 정보 -->
     <section class="retirement-info-section none">
@@ -338,6 +347,5 @@
             </div>
         </article>
     </section>
-
 </body>
 </html>
