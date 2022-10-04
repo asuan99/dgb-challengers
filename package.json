@@ -32,7 +32,6 @@
     "morgan": "^1.10.0",
     "path": "^0.12.7",
     "reflect-metadata": "^0.1.13",
-    "request": "^2.88.2",
     "ts-node": "^10.9.1",
     "tsc-watch": "^5.0.3"
   },

@@ -2,7 +2,6 @@ import axios from 'axios';
 
 import createHttpError from 'http-errors';
 import QueryString from 'qs';
-import request from 'request';
 
 
 
@@ -23,11 +22,8 @@ class AuthService {
         const json = await axios.post("https://testapi.openbanking.or.kr/oauth/2.0/token",QueryString.stringify(data),{
             headers:header
         })
-        return json.data;
         
-        // const token = await axios.post('https://testapi.openbanking.or.kr/oauth/2.0/token',
-        //     data,{headers:header})
-        //console.log(token); 
+        return json.data;
     }
 
     get default() {
