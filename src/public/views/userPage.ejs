@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/semantic.css">
     <link rel="stylesheet" href="css/tag.css">
     <link rel="stylesheet" href="css/snb.css">
+    <link rel="stylesheet" href="css/mainContent.css">
     <link rel="stylesheet" href="css/section1.css">
     <link rel="stylesheet" href="css/accidentNews.css">
     <link rel="stylesheet" href="css/retirementInfo.css">
@@ -15,86 +16,151 @@
 </head>
 <body>
     <div class="wrapper">
-        <main class="user-interface">
-            <div class="snb">
-                <!-- profile 이미지와 이름 -->
-                <div class="profile">
-                    <div class="profile-image">
-                        <img src="../image/retire_image.jpg" alt="" width="64px" height="48px" style="vertical-align: middle;">
-                    </div>
-                    <div class="profile-name">
-                        <span class="text-color">이원호</span>님 환영합니다!
-                    </div>
+        <div class="snb">
+            <!-- profile 이미지와 이름 -->
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="../image/retire_image.jpg" alt="" width="64px" height="48px" style="vertical-align: middle;">
                 </div>
-
-                <!-- user interface -->
-                <div class="category">
-                    <!-- mypage -->
-                    <div class="category-mypage-box">
-                        <div class="category-content">
-                            <div class="category-title">
-                                <span class="title">마이페이지</span>
-                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
-                            </div>
-                            <div class="category-more show">
-                                <div class="category-item clicked-item" id="portfolio_register">포트폴리오 등록</div>
-                                <div class="category-item" id="profile_update">프로필 수정</div>
-                                <div class="category-item" id="account_manage">계정 관리</div>
-                                <div class="category-item" id="account_remove">계정 탈퇴</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- retirement -->
-                    <div class="category-retirement--box">
-                        <div class="category-content">
-                            <div class="category-title">
-                                <span class="title">은퇴계산기</span>
-                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
-                            </div>
-                            <div class="category-more">
-                                <div class="category-item" id="retirement_input">은퇴계산기 입력</div>
-                                <div class="category-item" id="annual_return">연간 수익률</div>
-                                <div class="category-item" id="lognterm_return">장기 수익률</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- portfolio -->
-                    <div class="category-portfolio-box">
-                        <div class="category-content">
-                            <div class="category-title">
-                                <span class="title">포트폴리오</span>
-                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
-                            </div>
-                            <div class="category-more">
-                                <div class="category-item" id="my_portfolio">내 포트폴리오</div>
-                                <div class="category-item" id="comparison_portfolio">포트폴리오 비교</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- news -->
-                    <div class="category-news-box">
-                        <div class="category-content">
-                            <div class="category-title">
-                                <span class="title">증시 뉴스</span>
-                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
-                            </div>
-                            <div class="category-more">
-                                <div class="category-item" id="main_news">주요 증시 뉴스</div>
-                                <div class="category-item" id="korea_news">한국 증시 뉴스</div>
-                                <div class="category-item" id="us_news">미국 증시 뉴스</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- logout Btn -->
-                <div class="logout">
-                    <button class="logout-btn"><a href="./">로그아웃</a></button>
+                <div class="profile-name">
+                    <span class="text-color">이원호</span>님 환영합니다!
                 </div>
             </div>
+
+            <!-- user interface -->
+            <div class="category">
+                <!-- mypage -->
+                <div class="category-mypage-box">
+                    <div class="category-content">
+                        <div class="category-title">
+                            <span class="title">마이페이지</span>
+                            <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
+                        </div>
+                        <div class="category-more show">
+                            <div class="category-item clicked-item" id="portfolio_register">포트폴리오 등록</div>
+                            <div class="category-item" id="profile_update">프로필 수정</div>
+                            <div class="category-item" id="account_manage">계정 관리</div>
+                            <div class="category-item" id="account_remove">계정 탈퇴</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- retirement -->
+                <div class="category-retirement--box">
+                    <div class="category-content">
+                        <div class="category-title">
+                            <span class="title">은퇴계산기</span>
+                            <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
+                        </div>
+                        <div class="category-more">
+                            <div class="category-item" id="retirement_input">은퇴계산기 입력</div>
+                            <div class="category-item" id="annual_return">연간 수익률</div>
+                            <div class="category-item" id="longterm_return">장기 수익률</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- portfolio -->
+                <div class="category-portfolio-box">
+                    <div class="category-content">
+                        <div class="category-title">
+                            <span class="title">포트폴리오</span>
+                            <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
+                        </div>
+                        <div class="category-more">
+                            <div class="category-item" id="my_portfolio">내 포트폴리오</div>
+                            <div class="category-item" id="comparison_portfolio">포트폴리오 비교</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- news -->
+                <div class="category-news-box">
+                    <div class="category-content">
+                        <div class="category-title">
+                            <span class="title">증시 뉴스</span>
+                            <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
+                        </div>
+                        <div class="category-more">
+                            <div class="category-item" id="main_news">주요 증시 뉴스</div>
+                            <div class="category-item" id="korea_news">한국 증시 뉴스</div>
+                            <div class="category-item" id="us_news">미국 증시 뉴스</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- logout Btn -->
+            <div class="logout">
+                <button class="logout-btn"><a href="./">로그아웃</a></button>
+            </div>
+        </div>
+
+        <main class="main-content">
+            <!-- mypage -->
+            <!-- portfolio_register -->
+            <section id="portfolio_register_content" class="user-content show">
+                portfolio_register
+            </section>
+
+            <!-- profile_update -->
+            <section id="profile_update_content" class="user-content">
+                profile_update
+            </section>
+
+            <!-- account_manage -->
+            <section id="account_manage_content" class="user-content">
+                account_manage
+            </section>
+
+            <!-- account_remove -->
+            <section id="account_remove_content" class="user-content">
+                account_remove
+            </section>
+
+            <!-- retirement -->
+            <!-- retirement_input -->
+            <section id="retirement_input_content" class="user-content">
+                retirement_input
+            </section>
+
+            <!-- annual_return -->
+            <section id="annual_return_content" class="user-content">
+                annual_return
+            </section>
+
+            <!-- longterm_return -->
+            <section id="longterm_return_content" class="user-content">
+                longterm_return
+            </section>
+
+
+            <!-- portfolio -->
+            <!-- my_portfolio -->
+            <section id="my_portfolio_content" class="user-content">
+                my_portfolio
+            </section>
+
+            <!-- comparison_portfolio -->
+            <section id="comparison_portfolio_content" class="user-content">
+                comparison_portfolio
+            </section>
+
+            <!-- news -->
+            <!-- main_news -->
+            <section id="main_news_content" class="user-content">
+                main_news
+            </section>
+
+            <!-- korea_news -->
+            <section id="korea_news_content" class="user-content">
+                korea_news
+            </section>
+
+            <!-- us_news -->
+            <section id="us_news_content" class="user-content">
+                us_news
+            </section>
         </main>
 
         <script src="js/snbLoading.js"></script>

@@ -1,10 +1,11 @@
 const category = document.querySelector(".category"),
     toggleBtns = category.querySelectorAll(".toggleBtn"),
     titles = category.querySelectorAll(".title"),
-    items = category.querySelectorAll(".category-item");
+    items = category.querySelectorAll(".category-item"),
+    main = document.querySelector(".main-content");
 
 const SHOW = "show";
-const CLICKED_ITEM = "clicked-item"
+const CLICKED_ITEM = "clicked-item";
 
 function toggle() {
     titles.forEach(title => {
@@ -43,7 +44,11 @@ function clickItem() {
 }
 
 function loadContent(ContentName) {
-    console.log(ContentName + "해당하는 Content 열기");
+    const previous_section = main.querySelector(".show");
+    const section = main.querySelector(`#${ContentName}_content`);
+
+    previous_section.classList.remove(SHOW);
+    section.classList.add(SHOW);
 }
 
 function init() {

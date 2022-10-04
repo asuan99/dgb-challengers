@@ -1,7 +1,7 @@
 .snb{
     position: relative;
     width: 288px;
-    height: 100%;
+    height: 100vh;
     border-right: 1px solid gray;
     padding: 10px 5px;
 
@@ -74,6 +74,8 @@
 }
 
 .logout-btn{
+    background-color: transparent;
+    border: none;
     font-size: 18px !important;
 }
 

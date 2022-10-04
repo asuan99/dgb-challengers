@@ -1,0 +1,20 @@
+.wrapper{
+    display: flex;
+}
+
+.main-content{
+    position: relative;
+    flex-grow: 1;
+    display: inline-block;
+    width: 50vh;
+    height: 100vh;
+}
+
+.user-content{
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
