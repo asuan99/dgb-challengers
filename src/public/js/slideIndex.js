@@ -36,7 +36,6 @@ function nowSlidePage(num) {
     let page_count = document.querySelector(".slide-page");
     let now_page = parseInt(page_count.innerHTML.substring(0, 1));
 
-    console.log(now_page);
     now_page += num;
     page_count.innerHTML = `${now_page}/3`;
 }
