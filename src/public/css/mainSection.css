@@ -1,8 +1,133 @@
 .main-section{
+    padding: 144px;
+    height: 70vh;
+}
+
+.slide-banner{
+    
+}
+
+.banner-content{
     display: flex;
     justify-content: center;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.banner1-title{
+    display: flex;
+    gap: 16px;
+    color: black;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.banner1-title>span{
+    display: flex;
+    align-items: flex-end;
+}
+
+.banner1-guide{
+    margin-top: 36px;
+    color: black;
+    font-size: 20px;
+}
+
+.banner1-user-ex{
+    display: inline-block;
+}
+
+.banner2 {
+    gap: 96px !important;
+}
+
+.banner2-title {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.banner2-guide{
+    color: white;
+    font-size: 20px;
+}
+
+.banner2-button-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    padding: 32px;
+}
+
+.banner2-button-box>button{
+    border: none;
+    background-color: #d3d3d3;
+    padding: 24px 16px;
+    border-radius: 10%;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.banner2-button-box>button:hover{
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+.banner-information{
+    position: relative;
+}
+
+.banner3 {
+    gap: 96px !important;
+}
+
+.banner3-content{
+    padding: 64px 0;
+}
+
+.banner3-title{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.banner3-guide {
+    padding: 16px 0 0 24px;
+    font-size: 20px;
+}
+
+.banner3-icon-box{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.banner3-icon-content{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 70vh;
+    gap: 32px;
+}
+
+.banner3-icon-image{
+    text-align: center;
+}
+
+.icon-border-box{
+    display: inline-block;
+    padding: 24px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.banner3-icon-title{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.banner3-icon-content{
+    font-size: 14px;
 }
 
 #go_manage_btn{
