@@ -24,6 +24,7 @@ header{
 }
 
 .main-banner{
+    position: relative;
     background: transparent url(https://d27mjrcvcy56qq.cloudfront.net/images/home/main-banner.jpg) no-repeat;
     background-size: cover;
 

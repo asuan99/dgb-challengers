@@ -31,6 +31,12 @@
     display: block !important;
 }
 
+.showO{
+    visibility: visible;
+
+    opacity: 1 !important;
+}
+
 .clicked-mode{
     color: #00a892;
 }
