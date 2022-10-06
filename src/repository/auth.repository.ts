@@ -1,11 +1,13 @@
 import db from '../models';
 import { SignUpDto } from '../dto';
-const UserModel = db.User;
+import {UserSchema} from '../models';
 
 class AuthRepository {
     constructor() {}
     private async createUser(dto: SignUpDto) {
-        const user = await UserModel.create(dto);
+      console.log({...dto});
+        const user = await UserSchema.create({...dto});
+        console.log(user);
         return user;
       }
     get default() {

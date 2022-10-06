@@ -29,7 +29,6 @@ class AuthService {
     }
     private async signUp(dto:SignUpDto){
         const repository = new AuthRepository().default;
-        console.log(dto);
         repository.createUser(dto);
     }
     get default() {

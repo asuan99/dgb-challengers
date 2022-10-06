@@ -5,15 +5,19 @@ import path from 'path';
 import Framework from '../framework';
 import { ErrorBoundaryModule, RouterModule } from '../framework/modules';
 import { AuthController, PageController } from './controller';
+import mongoose from 'mongoose';
 import './util/env';
 import db from './models';
+const { MONGO_URI } = process.env;
+const mongoUrl = MONGO_URI || '';
+
+mongoose
+  .connect(mongoUrl, { retryWrites: true })
+  .then(() => console.log('successfully connect mongo db'))
+  .catch((e: any) => { console.error(e); console.log('failed db connection') });
 
 
-db.sequelize.sync().then(()=>{
-    console.log("DB Connect!");
-}).catch((err: any)=>{
-    console.error(err);
-})
+
 
 
 

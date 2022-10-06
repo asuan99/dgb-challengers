@@ -39,7 +39,8 @@ class AuthController implements ControllerDefaultClass {
     private signUp(){
         const service = new AuthService().default;
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {
-            console.log(req.body);
+            service.signUp(req.body);
+            res.render('index');
         }
     }
 
