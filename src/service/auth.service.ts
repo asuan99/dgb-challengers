@@ -2,6 +2,8 @@ import axios from 'axios';
 
 import createHttpError from 'http-errors';
 import QueryString from 'qs';
+import { SignUpDto } from '../dto';
+import { AuthRepository } from '../repository';
 
 
 
@@ -25,10 +27,15 @@ class AuthService {
         
         return json.data;
     }
-
+    private async signUp(dto:SignUpDto){
+        const repository = new AuthRepository().default;
+        console.log(dto);
+        repository.createUser(dto);
+    }
     get default() {
         return {
             authorize: this.authorize,
+            signUp : this.signUp,
         }
     }
 

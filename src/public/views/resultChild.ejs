@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <body>
     <div id = "accessToken"><%=data.access_token%></div>
     <div id = "refreshToken"><%=data.refresh_token%></div>
     <div id = "usernum"><%=data.user_seq_no%></div>
-</body>
+
 <script>
+    alert('sibal!');
     opener.document.getElementById("userAccessToken").value =
-        document.getElementById("acccessToken").textContent;
-        opener.document.getElementById("userRefreshToken").value =
-        document.getElementById("refreshToken").textContent;
-        opener.document.getElementById("userSeqNo").value =
-        document.getElementById("usernum").textContent;
+        document.getElementById("acccessToken").value;
+    opener.document.getElementById("userRefreshToken").innerHTML =
+        document.getElementById("refreshToken").value;
+    opener.document.getElementById("userSeqNo").innerText =
+        document.getElementById("usernum").value;
 </script>
+
 </html>

@@ -5,10 +5,13 @@
       "outDir": "./dist",
       "strict": true,
       "esModuleInterop": true,
+      "allowJs": true,
       "lib": ["es5", "es6"],
       "moduleResolution": "node",
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
       "sourceMap": true
     },
     "exclude": ["node_modules", "dist"]

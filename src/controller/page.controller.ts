@@ -39,7 +39,7 @@ class PageController implements ControllerDefaultClass {
     }
 
     get default() {
-        return {
+        return {    
             searchNews: this.searchNews,
             index : this.index,
             userIndex : this.userIndex,

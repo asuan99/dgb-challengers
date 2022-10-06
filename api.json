@@ -55,5 +55,9 @@
                 "json": {}
             }
         }
+    },
+    "signUp":{
+        "url":"/user/signup",
+        "method":"post"
     }
 }

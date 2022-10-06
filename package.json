@@ -8,7 +8,7 @@
     "type": "ts-node src/app.ts",
     "start": "tsc-watch --onSuccess \"node dist/src/app.js\" ",
     "prod": "NODE_ENV=production node build/src/app.js",
-    "dev": "NODE_ENV=development concurrently \"npx tsc --watch\" \"nodemon -q src/app.ts\""
+    "dev": "tsnd --respawn src/app.ts"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +21,8 @@
     "@types/morgan": "^1.9.3",
     "@types/node": "^18.7.18",
     "@types/request": "^2.48.8",
+    "@types/sequelize": "^4.28.14",
+    "@types/uuid": "^8.3.4",
     "axios": "^0.27.2",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.0.2",
@@ -32,10 +34,15 @@
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
     "path": "^0.12.7",
+    "pg": "^8.8.0",
+    "pg-hstore": "^2.3.4",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.23.2",
+    "sequelize-cli-typescript": "^3.2.0-c",
     "ts-node": "^10.9.1",
-    "tsc-watch": "^5.0.3"
+    "ts-node-dev": "^2.0.0",
+    "tsc-watch": "^5.0.3",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "concurrently": "^7.4.0",

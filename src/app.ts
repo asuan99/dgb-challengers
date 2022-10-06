@@ -6,21 +6,16 @@ import Framework from '../framework';
 import { ErrorBoundaryModule, RouterModule } from '../framework/modules';
 import { AuthController, PageController } from './controller';
 import './util/env';
-import model from './models/index';
+import db from './models';
 
-// const {MONGO_ID, MONGO_PW,MONGO_OPTION} = process.env;
-// const MONGO_URL = `mongodb+srv://${MONGO_ID}:${MONGO_PW}@${MONGO_OPTION}`;
-model.sequelize.sync().then(()=>{
+
+db.sequelize.sync().then(()=>{
     console.log("DB Connect!");
 }).catch((err: any)=>{
     console.error(err);
 })
 
 
-// mongoose
-//   .connect(MONGO_URL, { retryWrites: true })
-//   .then(() => console.log('successfully connect mongo db'))
-//   .catch((e: any) => { console.error(e); console.log('failed db connection') });
 
 const framework = new Framework({
     serverProps: {
