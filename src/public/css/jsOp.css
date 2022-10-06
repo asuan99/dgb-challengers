@@ -1,5 +1,5 @@
 .text-color{
-    color: aqua;
+    color: #6EC1E4;
 }
 
 #scrollTopBtn{
@@ -25,6 +25,16 @@
 
 .none{
     display: none !important;
+}
+
+.show{
+    display: block !important;
+}
+
+.showO{
+    visibility: visible;
+
+    opacity: 1 !important;
 }
 
 .clicked-mode{

@@ -1,0 +1,39 @@
+.about-page-info{
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 128px;
+    padding: 0 144px;
+}
+
+.about-page-logo{
+    text-align: center;
+    border-bottom: 1px solid #6EC1E4;
+    padding-bottom: 24px;
+}
+
+.about-page-content{
+    margin: 32px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.about-page-ex{
+    padding: 0 16px;
+}
+
+.about-page-ex:nth-child(2) {
+    border-left: 1px solid #6EC1E4;
+    border-right: 1px solid #6EC1E4;
+}
+
+.about-page-ex-title {
+    font-size: 36px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about-page-ex-content{
+    margin-top: 32px;
+}

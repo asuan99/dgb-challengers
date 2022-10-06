@@ -1,124 +1,174 @@
-.main-top-section{
-    margin-top: 120px;
+.main-section{
+    display: flex;
+    position: relative;
+    padding: 144px;
+    height: 70vh;
+}
+
+.js-slide{
     display: flex;
     justify-content: center;
-    gap: 80px;
-}
-
-.greet-user{
-    padding-top: 76px;
-    text-align: center;
-
-    display: inline-block;
-}
-
-.rate-year-font{
-    margin-top: 32px;
-}
-
-.rate-year{
-    margin-top: 32px;
-
+    flex-grow: 1;
     position: relative;
-    width: 640px;
-    height: 72px;
 }
 
-.rate-year-move{
+.slide-banner{
     position: absolute;
-    left: 0;
-    bottom: 12px;
+    opacity: 0;
+
+    transition: all 0.5s ease-in-out;
 }
 
-.rate-year-progress{
-    position: absolute;
-    left: 0;
-    right: 640px;
-    bottom: 0;
-    height: 12px;
-    background-color: #00a892;
+.banner-content{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 32px;
 }
 
-.rate-year-line{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 640px;
-    border-bottom: 1px solid white;
+.banner1-title{
+    display: flex;
+    gap: 16px;
+    color: black;
+    font-size: 48px;
+    font-weight: bold;
 }
 
-.rate-year-percent{
-    position: absolute;
-    left: 0;
-    bottom: -27px;
+.banner1-title>span{
+    display: flex;
+    align-items: flex-end;
 }
 
-.portfolio{
+.banner1-guide{
+    margin-top: 36px;
+    color: black;
+    font-size: 20px;
+}
+
+.banner1-user-ex{
     display: inline-block;
-    width: 324px;
 }
 
-.user-portfolio{
+.banner2 {
+    gap: 96px !important;
+}
+
+.banner2-title {
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.banner2-guide{
+    color: white;
+    font-size: 20px;
+}
+
+.banner2-button-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    padding: 32px;
+}
+
+.banner2-button-box>button{
+    border: none;
+    background-color: #d3d3d3;
+    padding: 24px 16px;
+    border-radius: 10%;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.banner2-button-box>button:hover{
+    background-color: rgba(128, 128, 128, 0.7);
+}
+
+.banner-information{
+    position: relative;
+}
+
+.banner3 {
+    gap: 96px !important;
+}
+
+.banner3-content{
+    padding: 64px 0;
+}
+
+.banner3-title{
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.banner3-guide {
+    padding: 16px 0 0 24px;
+    font-size: 20px;
+}
+
+.banner3-icon-box{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.banner3-icon-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.banner3-icon-image{
     text-align: center;
-    margin-bottom: 15px;
 }
 
-.portfolio-info{
-    height: 324px;
-    background: conic-gradient(red 12%, orange 12% 24%,yellow 24% 46%, green 46% 70%, blue 70% 100%);
-    border: 1px solid #ccc;
+.icon-border-box{
+    display: inline-block;
+    padding: 24px;
+    border: 1px solid white;
     border-radius: 50%;
 }
 
-.target-amount{
-    all: unset;
-    color: aqua;
-    background: transparent;
+.banner3-icon-title{
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.main-bot-section{
-    padding-bottom: 112px;
+.banner3-icon-content{
+    font-size: 14px;
 }
 
-.user-group{
-    margin-top: 48px;
-    text-align: center;
+.slide-button-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    bottom: 64px;
+    right: 64px;
 }
 
-.rate-group{
-    position: relative;
-    width: 640px;
-    height: 72px;
+.slide-button-box>button{
+    background-color: #d3d3d3;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+
+    cursor: pointer;
+}
+
+#go_manage_btn{
+    position: absolute;
+    bottom: 64px;
+    left: 45%;
     
-    margin: 32px auto 0 auto;
-}
-
-.rate-group-move{   
-    position: absolute;
-    left: 0;
-    bottom: 4px;
-}
-
-/* progress 색상 조절 필요 */
-.rate-group-progress{
-    position: absolute;
-    left: 0;
-    right: 640px;
-    bottom: 0;
-    height: 12px;
-    background-color: #00a892;
-}
-
-.rate-group-line{
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 640px;
-    border-bottom: 1px solid white;
-}
-
-.rate-group-percent{
-    position: absolute;
-    left: 0;
-    bottom: -27px;
+    font-size: 20px;
+    padding: 10px 36px;
+    background-color: #6EC1E4;
+    border: none;
 }
