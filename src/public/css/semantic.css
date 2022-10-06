@@ -35,3 +35,9 @@ header{
     width: 100vw;
     height: 100vh;
 }
+
+footer{
+    margin-top: 128px;
+    border-top: 1px solid #ccc;
+    padding: 16px 128px;
+}

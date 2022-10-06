@@ -163,8 +163,12 @@
 }
 
 #go_manage_btn{
+    position: absolute;
+    bottom: 64px;
+    left: 45%;
+    
     font-size: 20px;
     padding: 10px 36px;
-    background-color: #00a892;
+    background-color: #6EC1E4;
     border: none;
 }
