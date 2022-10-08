@@ -29,6 +29,7 @@ class AuthController implements ControllerDefaultClass {
     private authorize_callback() {
         const service = new AuthService().default;
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {
+
             const code:string|undefined = String(req.query.code)||'';
             const data:any = await service.authorize(code);
             res.render('resultChild',{data:data});
@@ -39,14 +40,16 @@ class AuthController implements ControllerDefaultClass {
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {
             const result = await service.signUp(req.body);
             
+
             res.redirect('/');
         }
     }
-    private login(){
+    private signIn(){
         const service = new AuthService().default;
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {
-            const result = await service.login(req.body);
-            
+            const result = await service.signIn(req.body);
+            if(result.status==='success')
+                req.session.id !=result.user_email;
             res.redirect('/');
         }
     }
@@ -60,7 +63,7 @@ class AuthController implements ControllerDefaultClass {
             authorize: this.authorize,
             authorize_callback:this.authorize_callback,
             signUp:this.signUp,
-            login:this.login,
+            signIn:this.signIn,
         }
     }
 }

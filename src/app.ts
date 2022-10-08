@@ -7,7 +7,6 @@ import { ErrorBoundaryModule, RouterModule } from '../framework/modules';
 import { AuthController, PageController } from './controller';
 import mongoose from 'mongoose';
 import './util/env';
-import db from './models';
 const { MONGO_URI } = process.env;
 const mongoUrl = MONGO_URI || '';
 

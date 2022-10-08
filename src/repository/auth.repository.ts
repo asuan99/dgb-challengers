@@ -9,10 +9,10 @@ class AuthRepository {
         return user;
     }
     private async findUserByEmail(email:string){
-      return (await UserSchema.findOne({email}));
+      return (await UserSchema.findOne({user_email:email}));
     }
     private async checkDuplicateEmail(email:string){
-      return Boolean(await UserSchema.findOne({email}));
+      return Boolean(await UserSchema.findOne({user_email:email}));
     }
     get default() {
         return {

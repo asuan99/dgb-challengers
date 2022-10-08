@@ -59,5 +59,9 @@
     "signUp":{
         "url":"/user/signup",
         "method":"post"
+    },
+    "signIn":{
+        "url":"/user/signin",
+        "method":"post"
     }
 }

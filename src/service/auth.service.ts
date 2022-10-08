@@ -28,29 +28,36 @@ class AuthService {
     }
     private async signUp(dto:SignUpDto){
         const repository = new AuthRepository().default;
-
         if (await repository.checkDuplicateEmail(dto.uesr_email)) {
             return {status:'duplicated'};
         }
         const hashedPassword = await bcrypt.hash(dto.user_password, 10);
         const user = await repository.createUser({...dto,user_password : hashedPassword});
-        console.log(user);
         if(!user) return {status:'fail'};
-        return {status :'success'};
+        return {status :'success',email:user.user_email};
 
 
-        return user;
     }
-    private async login(dto:SignInDto){
+    private async signIn(dto: SignInDto) {
         const repository = new AuthRepository().default;
+    
+        const user = await repository.findUserByEmail(dto.user_email);
+    
+        if (!user) {
+          return { status: 'nouser' };
+        }
+        const isEqual = await bcrypt.compare(dto.user_password, user.user_password);
         
-        
-    }
+        if (!isEqual) {
+          return { status: 'fail'};
+        }
+        return { status: 'success', user_email:user.user_email };
+      }
     get default() {
         return {
             authorize: this.authorize,
             signUp : this.signUp,
-            login : this.login,
+            signIn : this.signIn,
         }
     }
 
