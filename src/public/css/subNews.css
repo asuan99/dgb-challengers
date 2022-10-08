@@ -65,13 +65,13 @@ a:hover{
 .accident-article-pagenator{
     margin-top: 64px;
     text-align: center;
-
-    cursor: pointer;
 }
 
 .accident-article-pagenator>button{
     padding: 5px 10px;
     margin: 0 8px;
+
+    cursor: pointer;
 }
 
 .chart-indicators{
