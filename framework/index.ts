@@ -6,6 +6,7 @@ import expressApp from './server/express';
 import {ServerProps} from './server';
 import { AppProps,Modules } from './server/types';
 
+
 interface FrameworkProps{
     serverProps : ServerProps;
     appProps : AppProps;
