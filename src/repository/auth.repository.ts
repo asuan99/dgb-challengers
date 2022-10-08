@@ -5,14 +5,20 @@ import {UserSchema} from '../models';
 class AuthRepository {
     constructor() {}
     private async createUser(dto: SignUpDto) {
-      console.log({...dto});
         const user = await UserSchema.create({...dto});
-        console.log(user);
         return user;
-      }
+    }
+    private async findUserByEmail(email:string){
+      return (await UserSchema.findOne({email}));
+    }
+    private async checkDuplicateEmail(email:string){
+      return Boolean(await UserSchema.findOne({email}));
+    }
     get default() {
         return {
           createUser: this.createUser,
+          findUserByEmail : this.findUserByEmail,
+          checkDuplicateEmail: this.checkDuplicateEmail,
         }
       }
 }

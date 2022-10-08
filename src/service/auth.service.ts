@@ -1,8 +1,7 @@
 import axios from 'axios';
-
-import createHttpError from 'http-errors';
+import bcrypt from 'bcrypt';
 import QueryString from 'qs';
-import { SignUpDto } from '../dto';
+import { SignUpDto ,SignInDto} from '../dto';
 import { AuthRepository } from '../repository';
 
 
@@ -29,12 +28,29 @@ class AuthService {
     }
     private async signUp(dto:SignUpDto){
         const repository = new AuthRepository().default;
-        repository.createUser(dto);
+
+        if (await repository.checkDuplicateEmail(dto.uesr_email)) {
+            return {status:'duplicated'};
+        }
+        const hashedPassword = await bcrypt.hash(dto.user_password, 10);
+        const user = await repository.createUser({...dto,user_password : hashedPassword});
+        console.log(user);
+        if(!user) return {status:'fail'};
+        return {status :'success'};
+
+
+        return user;
+    }
+    private async login(dto:SignInDto){
+        const repository = new AuthRepository().default;
+        
+        
     }
     get default() {
         return {
             authorize: this.authorize,
             signUp : this.signUp,
+            login : this.login,
         }
     }
 
