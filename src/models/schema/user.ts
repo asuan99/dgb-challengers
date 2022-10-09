@@ -6,9 +6,9 @@ const userSchema = new mongoose.Schema({
     user_password: { type: String, required: true }, // password
     
     
-    user_accessToken : {type:String,required:false},
-    user_refreshToken : {type:String,required:false},
-    user_seqNo : {type:String,required:false},
+    accessToken : {type:String,required:false},
+    refreshToken : {type:String,required:false},
+    user_seq : {type:String,required:false},
     
   },
   {

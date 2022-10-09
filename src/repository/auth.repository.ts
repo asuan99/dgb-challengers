@@ -1,5 +1,5 @@
 import db from '../models';
-import { SignUpDto } from '../dto';
+import { SignUpDto, TokenDto } from '../dto';
 import {UserSchema} from '../models';
 
 class AuthRepository {
@@ -11,6 +11,9 @@ class AuthRepository {
     private async findUserByEmail(email:string){
       return (await UserSchema.findOne({user_email:email}));
     }
+    private async createToken(email : string,dto:TokenDto){
+      const user = await UserSchema.findOneAndUpdate({user_email:email},{...dto});
+    }
     private async checkDuplicateEmail(email:string){
       return Boolean(await UserSchema.findOne({user_email:email}));
     }
@@ -19,6 +22,7 @@ class AuthRepository {
           createUser: this.createUser,
           findUserByEmail : this.findUserByEmail,
           checkDuplicateEmail: this.checkDuplicateEmail,
+          createToken:this.createToken,
         }
       }
 }

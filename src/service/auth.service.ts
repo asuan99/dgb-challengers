@@ -8,7 +8,7 @@ import { AuthRepository } from '../repository';
 
 class AuthService {
     constructor() { }
-    private async authorize(code:string) {
+    private async authorize(code:string,user:string) {
         const redirect_uri = `http://localhost:${process.env.PORT}/financial/auth/callback`
         const data = {
             'code':code,
@@ -23,7 +23,15 @@ class AuthService {
         const json = await axios.post("https://testapi.openbanking.or.kr/oauth/2.0/token",QueryString.stringify(data),{
             headers:header
         })
+        const dto = {
+            'accessToken':json.data.access_token,
+            'refreshToken':json.data.refresh_token,
+            'user_seq':json.data.user_seq_no,
+        }
+        const repository = new AuthRepository().default;
+        repository.createToken(user,dto);
         
+
         return json.data;
     }
     private async signUp(dto:SignUpDto){
@@ -33,6 +41,7 @@ class AuthService {
         }
         const hashedPassword = await bcrypt.hash(dto.user_password, 10);
         const user = await repository.createUser({...dto,user_password : hashedPassword});
+
         if(!user) return {status:'fail'};
         return {status :'success',email:user.user_email};
 

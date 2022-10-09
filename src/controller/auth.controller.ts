@@ -18,7 +18,6 @@ class AuthController implements ControllerDefaultClass {
         return async(req:express.Request,res:express.Response,next:express.NextFunction)=>{
             //req.session.destroy((err)=>console.error(err));
             const id  = req.session.user;
-            console.log(id);
             let content;
             if(req.session.user){
                 /* 리얼 쿠키값에 저장된 아이디를 뷰에서 사용할 수 있도록 함 : session-id값에 맞는 아이디를 줄 수 있도록 설계를 해야겠지 원래는?  */
@@ -26,9 +25,9 @@ class AuthController implements ControllerDefaultClass {
                 content = `<h1>${req.session.user} 님 안녕하세요.</h1>`;
               }
            
-            res.send(content);
+            //res.send(content);
           
-            //res.render('auth',{id:id});
+            res.render('auth',{id:id});
         }
     }
 
@@ -45,10 +44,12 @@ class AuthController implements ControllerDefaultClass {
     private authorize_callback() {
         const service = new AuthService().default;
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {
-
+            
             const code:string|undefined = String(req.query.code)||'';
-            const data:any = await service.authorize(code);
-            res.render('resultChild',{data:data});
+            const user = req.session.user||'';
+            const result:any = await service.authorize(code,user);
+            
+            res.render('resultChild',{data:result});
         }
     }
     private signUp(){
