@@ -1,0 +1,138 @@
+.my-portfolio-content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 120px;
+    background: transparent url("../image/accident_background.jpg") no-repeat;
+}
+
+.portfolio-left-content{
+    display: flex;
+    flex-direction: column;
+    padding: 36px 12px;
+}
+
+.my-portfolio-content-title{
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.my-portfolio-graph {
+    width: 864px;
+    height: 432px;
+}
+
+.portfolio-right-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 48px;
+}
+
+.my-portfolio-in{
+    position: relative;
+    margin: 0 15px;
+    border: 1px solid gray;
+    border-radius: 10%;
+    background-color: #d3d3d3;
+    opacity: 0.8;
+}
+
+.my-portfolio-in-title {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.my-portfolio-in-content{
+    padding-right: 15px;
+    margin: 15px 0 30px 0;
+}
+
+.my-portfolio-in-more{
+    text-align: right;
+    padding: 0 20px 10px 0;
+}
+
+.my-portfolio-in-more>a{
+    color: #ccc;
+}
+
+.my-portfolio-in-content .li{
+    margin: 10px 0;
+}
+
+.portfolio-archeive{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.annual-return{
+    color: white;
+}
+
+.annual-return h3{
+    margin-bottom: 5px;
+}
+
+.final-goal{
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-progress-bar{
+    position: relative;
+    width: 100px;
+    margin: 0 30px;
+    border: 1px solid white;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* height, bottom, percent.innerHTML 내용 변경해주면됨 */
+.retirement-vertical-progress{
+    height: 33%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 128, 0, 0.8);
+}
+
+.retirement-vertical-progress-percent{
+    position: absolute;
+    bottom: 33%;
+    left: -15px;
+    color: white;
+}
+
+.todays-box{
+    position: relative;
+    flex-grow: 1;
+    color: white;
+}
+
+.todays-maxim{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+#todays_author{
+    position: absolute;
+
+    bottom: 15px;
+    right: 15px;
+    font-size: 24px;
+}
