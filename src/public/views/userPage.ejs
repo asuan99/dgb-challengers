@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/mainContent.css">
     <link rel="stylesheet" href="css/myPortfolio.css">
     <link rel="stylesheet" href="css/cssprogress.css">
-    <link rel="stylesheet" href="css/cssprogress.min.css"/>
+    <link rel="stylesheet" href="css/cssprogress.min.css">
+    <link rel="stylesheet" href="css/comparisonPortfolio.css">
 
     <link rel="stylesheet" href="css/section1.css">
     <link rel="stylesheet" href="css/retirementInfo.css">
@@ -104,7 +105,7 @@
         <main class="main-content">
             <!-- portfolio -->
             <!-- my_portfolio -->
-            <section id="my_portfolio_content" class="user-content show">
+            <section id="my_portfolio_content" class="user-content">
                 <div class="my-portfolio-content">
                     <article class="portfolio-left-content">
                         <div id="my_portfolio_graph" class="my-portfolio-graph"></div>
@@ -181,8 +182,74 @@
             </section>
 
             <!-- comparison_portfolio -->
-            <section id="comparison_portfolio_content" class="user-content">
-                comparison_portfolio
+            <section id="comparison_portfolio_content" class="user-content show">
+                <div class="comparison-portfolio-content">
+                    <div class="comparison-title">
+                        <span>포트폴리오 비교 & 랭킹</span>
+                    </div>
+
+                    <div class="rank-and-comparison-portfolio">
+                        <div class="rank-portfolio">
+                            <div class="rank-portfolio-title">
+                                포트폴리오 랭킹
+                            </div>
+
+                            <form class="search-user-form" action="get">
+                                <input class="search-user" type="text" placeholder="유저 검색창" name="search_user">
+                                <input class="submit-search-user" type="submit" value="검색">
+                            </form>
+
+                            <div class="rank-portfolio-tag">
+                                <button class="clicked-tag">수익률</button>
+                                <button>목표달성률</button>
+                                <button>랭킹</button>
+                            </div>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>순위</td> <td>닉네임</td> <td>금액</td>
+                                    </tr>
+                                    <tr>
+                                        <td>왕관</td> <td><a href="">김수석</a></td> <td>₩100,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2등</td> <td><a href="">황박사</a></td> <td>₩99,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3등</td> <td><a href="">나만없어고양이</a></td> <td>₩88,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4등</td> <td><a href="">나도1등</a></td> <td>₩77,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5등</td> <td><a href="">치킨집차리자</a></td> <td>₩66,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6등</td> <td><a href="">제드팀</a></td> <td>₩55,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7등</td> <td><a href="">대출은 리드코프</a></td> <td>₩44,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8등</td> <td><a href="">youtube_kk</a></td> <td>₩33,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9등</td> <td><a href="">워뇨띠</a></td> <td>₩22,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10등</td> <td><a href="">고양이에옹</a></td> <td>₩11,000,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="rank-portfolio-more">
+                                <button>더 보기..</button>
+                            </div>
+                        </div>
+                        <div class="comparison-portfolio">
+                            dd
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- acheivement_content -->

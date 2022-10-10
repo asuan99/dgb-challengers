@@ -1,0 +1,89 @@
+.comparison-portfolio-content{
+    width: 100%;
+    height: 100%;
+    background: transparent url("../image/accident_background.jpg") no-repeat;
+}
+
+.comparison-title{
+    padding: 30px 0 30px 30px;
+    color: white;
+    font-size: 24px;
+}
+
+.rank-and-comparison-portfolio{
+    display: flex;
+    flex-direction: row;
+}
+
+.rank-portfolio{
+    padding: 15px 0;
+    width: 432px;
+    text-align: center;
+}
+
+.rank-portfolio-title{
+    color: white;
+    font-size: 20px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.search-user{
+    padding-inline-start: 15px;
+    width: 288px;
+    height: 100%;
+}
+
+.submit-search-user{
+    padding: 6px;
+    cursor: pointer;
+}
+
+.rank-portfolio-tag{
+    text-align: right;
+    margin: 24px 0 8px;
+    color: #ccc;
+}
+
+.clicked-tag{
+    color: skyblue !important;
+}
+
+.rank-portfolio-tag button{
+    all: unset;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.rank-portfolio table{
+    padding-left: 32px;
+    width: 100%;
+}
+
+.rank-portfolio th,
+.rank-portfolio td{
+    padding: 16px 0;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.rank-portfolio-more{
+    padding: 10px 10px 0;
+    text-align: right;
+}
+
+.rank-portfolio-more button{
+    all: unset;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.rank-portfolio-more button:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+td>a{
+    color: white;
+}
