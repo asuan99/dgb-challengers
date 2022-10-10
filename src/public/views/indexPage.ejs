@@ -45,8 +45,11 @@
                         <div class="gnb-item">랭킹</div>
                         <div class="gnb-item">커뮤니티</div>
                         <div class="gnb-item">고객센터</div>
-                        <div class="gnb-item js-login">로그인</div>
-                        <div class="gnb-item js-logout none">로그아웃</div>
+                        <% if(id == null) { %>
+                            <div class="gnb-item js-login">로그인</div>
+                        <% } else { %>
+                        <div class="gnb-item js-logout">로그아웃</div>
+                        <% } %>
                     </div>
                 </div>
             </header>
@@ -153,7 +156,7 @@
                 </div>
             </section>
 
-            <button id="go_manage_btn"><a href="./user">시작하기</a></button>
+            <button id="go_manage_btn" onclick="start('<%=id%>')">시작하기</button>
 
             <div class="slide-button-box">
                 <button name="left_move" class="slide-btn">&lt;</button>
@@ -253,6 +256,8 @@
         <div class="overlay none"></div>
         <button id="scrollTopBtn" style="visibility: hidden;"><a href="#header">TOP</a></button>
     </div>
+
+    <script src="js/startUser.js"></script>
     <script src="js/slideIndex.js"></script>
     <script src="js/topMove.js"></script>
     <script src="js/modal.js"></script>
