@@ -28,7 +28,8 @@ class PageController implements ControllerDefaultClass {
 
     private index(api:RouterApiSpec){
         return async (req:express.Request,res:express.Response)=>{
-            res.render('indexPage', {id: null});
+            console.log(req.session.user);
+            res.render('indexPage', {id: req.session.user});
         }
     }
 

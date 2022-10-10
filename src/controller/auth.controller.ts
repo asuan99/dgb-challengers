@@ -26,7 +26,6 @@ class AuthController implements ControllerDefaultClass {
               }
            
             //res.send(content);
-          
             res.render('auth',{id:id});
         }
     }
