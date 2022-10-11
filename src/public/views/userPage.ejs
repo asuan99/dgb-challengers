@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/cssprogress.min.css">
     <link rel="stylesheet" href="css/comparisonPortfolio.css">
     <link rel="stylesheet" href="css/inputRetirement.css">
+    <link rel="stylesheet" href="css/camperStory.css">
 
 
     <link rel="stylesheet" href="css/mainNews.css">
@@ -60,22 +61,13 @@
                             <div class="category-more">
                                 <div class="category-item clicked-item" id="my_portfolio">내 포트폴리오</div>
                                 <div class="category-item" id="comparison_portfolio">포트폴리오 비교 & Rank</div>
-                                <div class="category-item" id="archeivement">목표 달성률</div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- camper_story -->
-                    <div class="category-camper-box">
+                    <div class="category-portfolio-box">
                         <div class="category-content">
-                            <div class="category-title">
-                                <span class="title">캠퍼 이야기</span>
-                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
-                            </div>
-                            <div class="category-more">
-                                <div class="category-item" id="camper_story">은퇴자들 이야기</div>
-                                <div class="category-item" id="sharing_info">정보/고민 공유</div>
-                            </div>
+                            <div class="category-item show" id="camper_story" style="padding-right: 30px"><span class="title">캠퍼 이야기</span></div>
                         </div>
                     </div>
 
@@ -108,7 +100,6 @@
         </div>
 
         <main class="main-content">
-
             <!-- input_retirement -->
             <section id="input_retirement_content" class="user-content">
                 <div class="input-retirement-content">
@@ -180,7 +171,7 @@
 
             <!-- portfolio -->
             <!-- my_portfolio -->
-            <section id="my_portfolio_content" class="user-content show">
+            <section id="my_portfolio_content" class="user-content">
                 <div class="my-portfolio-content">
                     <article class="portfolio-left-content">
                         <div id="my_portfolio_graph" class="my-portfolio-graph"></div>
@@ -419,20 +410,188 @@
                 </div>
             </section>
 
-            <!-- acheivement_content -->
-            <section id="archeivement_content" class="user-content">
-                archeivement
-            </section>
-
-            <!-- camper -->
             <!-- camper_story -->
-            <section id="camper_story_content" class="user-content">
-                camper_story
-            </section>
-
-            <!-- sharing_info -->
-            <section id="sharing_info_content" class="user-content">
-                sharing_info
+            <section id="camper_story_content" class="user-content show">
+                <div class="camper-story-content">
+                    <div class="camper-story-category">
+                        <button id="retirement_story" class="camper-category clicked-story">은퇴자 이야기</button>
+                        <button id="sharing_info" class="camper-category">정보 공유</button>
+                        <button id="worried_story" class="camper-category">고민 이야기</button>
+                    </div>
+                    <div class="camper-story-category-content">
+                        <div class="camper-story-main-content-box">
+                            <div class="camper-story-main-content">
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="http://www.kwangju.co.kr/upimages/gisaimg/201309/26_506974.jpg" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">김수석</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dicta ducimus sint consequatur cupiditate accusamus laudantium pariatur optio, quia ea repellat porro molestiae minus. Similique error enim dolor corporis eum.</p>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="https://newsimg.sedaily.com/2019/07/15/1VLPD210XD_1.jpg" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">황박사</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dicta ducimus sint consequatur cupiditate accusamus laudantium pariatur optio, quia ea repellat porro molestiae minus. Similique error enim dolor corporis eum.</p>
+                                        <h3>Coin is best Choice.</h3>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtEMUl%2FbtrDc6957nj%2FNwJoDw0EOapJNDSNRNZK8K%2Fimg.jpg" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">나만없어고양이</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <p>고양이를 키우자.</p>
+                                        <p>고양이에옹이는 최고에옹</p>
+                                        <p>고양이를 키우시면 저 처럼 돈을 많이 벌 수 있냐옹</p>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="camper-story-main-content">
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="http://www.kwangju.co.kr/upimages/gisaimg/201309/26_506974.jpg" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">나도1등</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <p>1등 따라하면 당신도 돈 벌수 있습니다. 쉽죠? 네 누구나 다 가능합니다.</p>
+                                        <p>저도 1등 따라서 4등이나 했어요. 따라오세요</p>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="https://www.pngmart.com/files/16/Crunchy-KFC-Chicken-PNG-Pic.png" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">치킨집차리자</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <p>여러분 치킨은 진리입니다.</p>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="https://obj-sg.thewiki.kr/data/7a65645f436c61737369632e6a7067.jpg" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">제드팀</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <h2>롤하면서 돈 모으는 방법 대방출</h2>
+                                        <p>1. 아무 코인을 탄다.</p>
+                                        <p>2. 롤을 한다.</p>
+                                        <p>3. 코인이 오르기를 기다린다. 그리.....</p>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                                <div class="camper-story-more">
+                                    <button>글 목록</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="camper-story-hot-article">
+                            <div class="camper-hot-title">
+                                <h2>인기 게시글</h2>
+                            </div>
+                            <div class="camper-hot-article">
+                                <div class="camper-hot-article-content">
+                                    <div class="camper-hot-article-rank">
+                                        <img src="../image/gold_medal.png" alt="" width="50px">
+                                        <span class="recommendation-text">추천수: 57,232</span>
+                                    </div>
+                                    <div class="camper-story-article">
+                                        <div class="camper-story-article-top">
+                                            <div class="camper-story-user-image">
+                                                <img src="http://www.kwangju.co.kr/upimages/gisaimg/201309/26_506974.jpg" alt="">
+                                            </div>
+                                            <div class="camper-story-user-info">
+                                                <span class="camper-story-author">김수석</span>
+                                                <div class="camper-story-date">2022.10.09</div>    
+                                            </div>
+                                        </div>
+                                        <div class="camper-story-article-content">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dicta ducimus sint consequatur cupiditate accusamus laudantium pariatur optio, quia ea repellat porro molestiae minus. Similique error enim dolor corporis eum.</p>
+                                        </div>
+                                        <div class="camper-story-article-more">
+                                            <button>더 보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="camper-hot-article-content">
+                                    <div class="camper-hot-article-rank">
+                                        <img src="../image/silver_medal.png" alt="" width="48px">
+                                        <span class="recommendation-text">추천수: 28,232</span>
+                                    </div>
+                                    <div class="camper-story-article">
+                                        <div class="camper-story-article-top">
+                                            <div class="camper-story-user-image">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Anonymous_emblem.svg" alt="">
+                                            </div>
+                                            <div class="camper-story-user-info">
+                                                <span class="camper-story-author">18년졸업</span>
+                                                <div class="camper-story-date">2018.10.09</div>    
+                                            </div>
+                                        </div>
+                                        <div class="camper-story-article-content">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dicta ducimus sint consequatur cupiditate accusamus laudantium pariatur optio, quia ea repellat porro molestiae minus. Similique error enim dolor corporis eum.</p>
+                                        </div>
+                                        <div class="camper-story-article-more">
+                                            <button>더 보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- news -->
@@ -888,6 +1047,7 @@
         </main>
     </div>
 
+    <script src="js/loadCamperStory.js"></script>
     <script src="js/portfolioChart.js"></script>
     <script src="js/snbLoading.js"></script>
     <script src="js/loadAccident.js"></script>

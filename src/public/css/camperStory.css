@@ -1,0 +1,134 @@
+.camper-story-content{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.camper-story-category{
+    display: inline-block;
+    padding: 30px;
+}
+
+.camper-story-category button{
+    padding: 16px;
+    margin: 0 16px;
+    border: 1px solid white;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+.camper-story-category-content{
+    display: flex;
+    flex-direction: row;
+    margin: 0 80px;
+    justify-content: space-evenly;
+}
+
+.camper-story-main-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 0 16px;
+}
+
+.camper-story-main-content-box{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.camper-story-article{
+    position: relative;
+    border: 1px solid gray;
+    padding: 16px;
+}
+
+.camper-story-article-top{
+    display: inline-flex;
+    gap: 16px;
+}
+
+.camper-story-user-image{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.camper-story-user-image img{
+    width: 50px;
+    height: 50px;
+}
+
+.camper-story-user-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.camper-story-date{
+    display: inline-block;
+    font-size: 12px;
+}
+
+.camper-story-article-content{
+    padding: 16px;
+    width: 432px;
+}
+
+.camper-story-article-more{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.camper-story-article-more button{
+    all: unset;
+    color: #ccc;
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.camper-story-more{
+    padding: 16px 0;
+    text-align: right;
+
+    cursor: pointer;
+}
+
+.camper-story-more button{
+    all: unset;
+    
+    cursor: pointer;
+}
+
+.camper-story-hot-article{
+    padding: 0 32px;
+}
+
+.camper-hot-title{
+    text-align: center;
+    border-bottom: 1px solid gray;
+}
+
+.camper-hot-article{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.recommendation-text{
+    font-size: 14px;
+}
+
+button:hover{
+    text-decoration: underline;
+}
+
+.clicked-story{
+    background-color: powderblue;
+}
