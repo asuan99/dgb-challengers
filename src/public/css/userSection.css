@@ -1,8 +1,10 @@
 .major-accident,
 .comparison-portfolio-content,
-.input-retirement-content {
+.input-retirement-content,
+.camper-story-content {
     width: 100%;
     height: 100%;
     background: transparent url("../image/accident_background.jpg") no-repeat;
+    overflow: hidden;
 }
 
