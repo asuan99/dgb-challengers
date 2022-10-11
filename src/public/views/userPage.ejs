@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="css/semantic.css">
     <link rel="stylesheet" href="css/tag.css">
     <link rel="stylesheet" href="css/snb.css">
+    <link rel="stylesheet" href="css/userSection.css">
     <link rel="stylesheet" href="css/mainContent.css">
     <link rel="stylesheet" href="css/myPortfolio.css">
     <link rel="stylesheet" href="css/cssprogress.css">
     <link rel="stylesheet" href="css/cssprogress.min.css">
     <link rel="stylesheet" href="css/comparisonPortfolio.css">
+    <link rel="stylesheet" href="css/inputRetirement.css">
 
-    <link rel="stylesheet" href="css/section1.css">
-    <link rel="stylesheet" href="css/retirementInfo.css">
 
     <link rel="stylesheet" href="css/mainNews.css">
     <link rel="stylesheet" href="css/subNews.css">
-
     <link rel="stylesheet" href="css/jsOp.css">
 
     <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
@@ -45,8 +44,11 @@
 
                 <!-- user interface -->
                 <div class="category">
-
-                    <div class="category-item clicked-item" id="my_portfolio">내 포트폴리오</div>
+                    <div class="category-portfolio-box">
+                        <div class="category-content">
+                            <div class="category-item show" id="input_retirement" style="padding-right: 30px"><span class="title">은퇴계산기</span></div>
+                        </div>
+                    </div>
 
                     <!-- portfolio -->
                     <div class="category-portfolio-box">
@@ -106,6 +108,76 @@
         </div>
 
         <main class="main-content">
+
+            <!-- input_retirement -->
+            <section id="input_retirement_content" class="user-content">
+                <div class="input-retirement-content">
+                    <div class="input-retirement-main-content">
+                        <div class="input-retirement-info">
+                            <div class="input-retirement-info-title">
+                                경제적 자유를 위한 계산
+                            </div>
+                            <form class="input-retirement-form" action="">
+                                <div class="input-retirement-form-title">목표 월 수익</div>
+                                <input type="text" placeholder="월 수익을 입력해주세요.">
+                                <input type="submit" value="확인">
+                            </form>
+                            <form class="input-retirement-form" action="">
+                                <div class="input-retirement-form-title">연간 수익률</div>
+                                <input type="text" placeholder="연간 수익률을 입력해주세요.">
+                                <input type="submit" value="확인">
+                            </form>
+                            <form class="input-retirement-form" action="">
+                                <div class="input-retirement-form-title">월 납입금액</div>
+                                <input type="text" placeholder="월 납입금액을 입력해주세요.">
+                                <input type="submit" value="확인">
+                            </form>
+                        </div>
+                        <div class="input-retirement-reference-info">
+                            <div class="retirement-reference-box">
+                                <!-- 목표 월 수익, 연간 수익률, 월 납입금액에 따라 변동되는 박스 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total-retirement-info-content">
+                        <span>은퇴 후 목표 수익</span>
+                        <input type="text" value="₩1,000,000,000" readonly>원을 받기까지
+                        <input type="text" value="" readonly>년
+                        <input type="text" value="" readonly>개월 걸립니다.
+
+                        <div class="start-camper-story">
+                            <button>시작하기</button>
+                        </div>
+                    </div>
+                    <div class="retirement-info-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td> <td>1년</td> <td>2년</td> <td>5년</td> <td>10년</td> <td>20년</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3.8%</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                </tr>
+                                <tr>
+                                    <td>5%</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                </tr>
+                                <tr>
+                                    <td>7%</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                </tr>
+                                <tr>
+                                    <td>9%</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                </tr>
+                                <tr>
+                                    <td>11%</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
             <!-- portfolio -->
             <!-- my_portfolio -->
             <section id="my_portfolio_content" class="user-content show">

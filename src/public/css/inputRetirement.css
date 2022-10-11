@@ -1,0 +1,117 @@
+.input-retirement-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-retirement-main-content{
+    padding: 40px 0;
+    margin: 0 200px;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.input-retirement-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.input-retirement-info-title{
+    text-align: center;
+    margin: 48px 0;
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+}
+
+.input-retirement-form{
+    margin: 16px 0;
+    color: white;
+    font-size: 24px;
+}
+
+.input-retirement-form .input-retirement-form-title{
+    display: inline-block;
+    width: 170px;
+}
+
+.input-retirement-form input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    width: 240px;
+    color: white;
+    font-size: 20px;
+    text-align: right;
+}
+
+.input-retirement-form input[type=submit] {
+    padding: 8px;
+    border-radius: 10%;
+}
+
+.input-retirement-reference-info{
+    flex-grow: 1;
+    padding: 30px;
+    height: 448px;
+}
+
+.retirement-reference-box{
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+    background-color: #d3d3d3;
+    opacity: 0.7;
+}
+
+.total-retirement-info-content{
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.total-retirement-info-content input[type=text]{
+    width: 170px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    text-align: right;
+    color: aqua;
+    font-size: 24px;
+}
+
+.start-camper-story{
+    text-align: right;
+    margin-right: 128px;
+}
+
+.start-camper-story button{
+    padding: 10px 24px;
+    width: 144px;
+    border-radius: 10%;
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.retirement-info-table{
+    margin: 32px 0;
+    padding: 0 80px;
+    font-size: 24px;
+    color: white;
+}
+
+.retirement-info-table table{
+    width: 100%;
+    text-align: center;
+}
+
+.retirement-info-table tr,
+.retirement-info-table td{
+    border: 1px solid white;
+    padding: 4px 0;
+}
