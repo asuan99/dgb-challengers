@@ -1,56 +1,97 @@
 anychart.onDocumentReady(function () {
-    // create pie chart with passed data
-    const chart1 = anychart.pie([
-      ['a', 1],
-      ['b', 1],
-      ['c', 1],
-      ['d', 1],
-      ['e', 1],
-      ['f', 1],
-      ['g', 1],
-      ['h', 1],
-      ['i', 1],
-      ['others', 1],
-    ]);
 
-    // set chart title text settings
-    chart1
-      .background({
-        corners: 30,
-        fill: 'transparent',
-      })
-      .legend({
-        position: 'right',
-        itemsLayout: 'vertical-expandable',
-        height: '160px',
-        align: 'middle',
-     })
-      .title({
-        text: '내 포트폴리오',
-        align: 'left',
-        fontColor: 'white',
-        fontSize: '32px',
-      })
-      // set chart radius
-      .radius('45%')
-      // create empty area in pie chart
-      .innerRadius('40%');
-
-    const chart2 = chart1;
-    chart2.title({
-      fontSize: '24px',
-    })
-
-    // set container id for the chart
-    chart1.container('my_portfolio_graph');
-    chart2.container('my_portfolio_graph_for_comparison')
-    // initiate chart drawing
-    chart1.draw();
-    chart2.draw();
+  drawMyChart();
+  drawDupleChart();
+  drawUserChart();
 });
 
-anychart.onDocumentReady(function () {
+function drawMyChart() {
   // create pie chart with passed data
+  let chart = anychart.pie([
+    ['a', 1],
+    ['b', 1],
+    ['c', 1],
+    ['d', 1],
+    ['e', 1],
+    ['f', 1],
+    ['g', 1],
+    ['h', 1],
+    ['i', 1],
+    ['others', 1],
+  ]);
+
+  // set chart title text settings
+  chart
+    .background({
+      corners: 30,
+      fill: 'transparent',
+    })
+    .legend({
+      position: 'right',
+      itemsLayout: 'vertical-expandable',
+      height: '160px',
+      align: 'middle',
+    })
+    .title({
+      text: '내 포트폴리오',
+      align: 'left',
+      fontColor: 'white',
+      fontSize: '32px',
+    })
+    // set chart radius
+    .radius('45%')
+    // create empty area in pie chart
+    .innerRadius('40%');
+
+
+  // set container id for the chart
+  chart.container('my_portfolio_graph');
+  // initiate chart drawing
+  chart.draw(true);
+}
+
+function drawDupleChart() {
+  let chart = anychart.pie([
+    ['a', 1],
+    ['b', 1],
+    ['c', 1],
+    ['d', 1],
+    ['e', 1],
+    ['f', 1],
+    ['g', 1],
+    ['h', 1],
+    ['i', 1],
+    ['others', 1],
+  ]);
+
+  // set chart title text settings
+  chart
+    .background({
+      corners: 30,
+      fill: 'transparent',
+    })
+    .legend({
+      position: 'right',
+      itemsLayout: 'vertical-expandable',
+      height: '160px',
+      align: 'middle',
+    })
+    .title({
+      text: '내 포트폴리오',
+      align: 'left',
+      fontColor: 'white',
+      fontSize: '24px',
+    })
+    // set chart radius
+    .radius('45%')
+    // create empty area in pie chart
+    .innerRadius('40%');
+
+  chart.container('my_portfolio_graph_for_comparison');
+  chart.draw();
+}
+
+function drawUserChart() {
   var chart = anychart.pie([
     ['a', 5],
     ['b', 2],
@@ -90,10 +131,9 @@ anychart.onDocumentReady(function () {
   const removeAD = () => {
     credits = document.querySelectorAll(".anychart-credits");
   
-    console.log(credits);
     credits.forEach(credit => {
       credit.innerHTML = "";
     })
   }
   removeAD();
-});
+}
