@@ -45,6 +45,17 @@
     font-size: 20px;
 }
 
+.startU{
+    all: unset;
+    color: #00a892;
+
+    cursor: pointer;
+}
+
+.startU:hover{
+    text-decoration: underline;
+}
+
 .banner1-user-ex{
     display: inline-block;
 }
@@ -81,6 +92,8 @@
     cursor: pointer;
     font-weight: bold;
     font-size: 16px;
+
+    cursor: pointer;
 }
 
 .banner2-button-box>button:hover{

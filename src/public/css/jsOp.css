@@ -39,10 +39,11 @@
     visibility: visible;
 
     opacity: 1 !important;
+    z-index: 101;
 }
 
 .clicked-mode{
-    color: #00a892;
+    color: #00a892 !important;
 }
 
 .select-bar{

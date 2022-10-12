@@ -48,7 +48,7 @@
                         <% if(id == null) { %>
                             <div class="gnb-item js-login">로그인</div>
                         <% } else { %>
-                        <div class="gnb-item js-logout">로그아웃</div>
+                            <div class="gnb-item js-logout">로그아웃</div>
                         <% } %>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                                 <div class="banner1-guide">
                                     <span>자산관리란 개인의 일생에 걸친 소득과 소비에 관한 계획과 실행을 말합니다.</span>
                                     <br>
-                                    <span>지금부터 당신의 경제적 자유를 위해 목표를 설정하고 <span class="text-color">자산관리</span>를 시작하세요.</span>
+                                    <span>지금부터 당신의 경제적 자유를 위해 목표를 설정하고 <button class="startU" onclick="start(id)">자산관리</button>를 시작하세요.</span>
                                 </div>
                             </div>
     
@@ -84,8 +84,8 @@
                                 <div class="banner2-guide">
                                     <span>그렇다면 과연 우리는 얼마를 목표로 잡아야 할까?</span>
                                     <div class="banner2-button-box">
-                                        <button>은퇴 계산기</button>
-                                        <button>필요자금 알아보러 가기</button>
+                                        <button onclick="start(id)">은퇴 계산기</button>
+                                        <button onclick="start(id)">필요자금 알아보러 가기</button>
                                     </div>
                                 </div>
                             </div>
