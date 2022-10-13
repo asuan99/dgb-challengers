@@ -28,13 +28,13 @@ class PageController implements ControllerDefaultClass {
 
     private index(api:RouterApiSpec){
         return async (req:express.Request,res:express.Response)=>{
-            res.render('indexPage', {title: 'Express'});
+            console.log(req.session.user);
+            res.render('indexPage', {id: req.session.user});
         }
     }
 
     private userIndex(api:RouterApiSpec) {
         return async (req:express.Request, res:express.Response) => {
-
             res.render('userPage');
         }
     }

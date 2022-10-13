@@ -1,0 +1,206 @@
+.comparison-title{
+    padding: 30px 0 30px 30px;
+    color: white;
+    font-size: 24px;
+}
+
+.rank-and-comparison-portfolio{
+    display: flex;
+    flex-direction: row;
+}
+
+.rank-portfolio{
+    padding: 15px;
+    width: 432px;
+    text-align: center;
+}
+
+.rank-portfolio-title{
+    color: white;
+    font-size: 20px;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.search-user{
+    padding-inline-start: 15px;
+    width: 288px;
+    height: 36px;
+}
+
+.submit-search-user{
+    padding: 6px;
+    cursor: pointer;
+}
+
+.rank-portfolio-tag{
+    text-align: right;
+    margin: 24px 0 8px;
+    color: #ccc;
+}
+
+.clicked-tag{
+    color: skyblue !important;
+}
+
+.rank-portfolio-tag button{
+    all: unset;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.rank-portfolio table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.rank-portfolio thead{
+    border: 1px solid white;
+}
+
+.rank-portfolio tbody{
+    padding: 16px 0;
+    border: 1px solid white;
+}
+
+.rank-portfolio th,
+.rank-portfolio td{
+    padding: 16px 0;
+    color: white;
+    text-align: center;
+}
+
+.rank-portfolio-more{
+    padding: 10px 10px 0;
+    text-align: right;
+}
+
+.rank-portfolio-more button{
+    all: unset;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.rank-portfolio-more button:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+td>a{
+    color: white;
+}
+
+.comparison-portfolio{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.portfolio-contents-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.portfolio-content-for-comparison{
+    display: inline-block;
+    flex-grow: 1;
+    position: relative;
+}
+
+.comparison-portfolio-vs{
+    height: 288px;
+}
+
+.portfolio-progress-box{
+    display: flex;
+    flex-direction: row;
+}
+
+.vertical-for-comparison{
+    display: inline-block;
+    width: 64px;
+    height: 160px;
+}
+
+.progress-for-comparison{
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.vertical-progress{
+    padding: 0 3px;
+    margin: 0 24px;
+    position: relative;
+    display: inline-block;
+}
+
+.my-vertical-progress{
+    height: 5%;
+    background-color: orange !important;
+}
+
+.user-vertical-progress{
+    height: 85%;
+    background-color: forestgreen !important;
+}
+
+.retirement-vertical-title{
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    bottom: -23px;
+    right: 22px;
+}
+
+.my-percent-for-comparison{
+    position: absolute;
+    bottom: 5%;
+    right: 0px;
+    color: white;
+}
+
+.user-percent-for-comparison{
+    position: absolute;
+    bottom: 85%;
+    right: -7px;
+    color: white;
+}
+
+.vs-portfolio-main-content{
+    padding-right: 32px;
+    margin: 32px 0;
+    opacity: 0.6;
+}
+
+.vs-portfolio-box{
+    border: 1px solid gray;
+    border-radius: 3%;
+    background-color: #d3d3d3;
+}
+
+.vs-portfolio-title{
+    padding: 16px 0;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 8px;
+    border-bottom: 1px solid white;
+}
+
+.vs-portfolio-main-content table{
+    margin: 16px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.vs-portfolio-main-content tr,
+.vs-portfolio-main-content td {
+    padding: 8px 0;
+}
+
+.question{
+    font-weight: bold;
+}

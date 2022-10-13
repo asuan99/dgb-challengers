@@ -2,7 +2,6 @@
     position: relative;
     left: 0;
 
-    border-right: 1px solid gray;
     background-color: rgba(0, 0, 0, 0.8);
 
     transition: all 0.5s ease-in-out;
@@ -97,18 +96,26 @@
     cursor:pointer;
 }
 
+.mypage{
+    position: absolute;
+    left: 8px;
+    bottom: 15px;
+}
+
 .logout{
     position: absolute;
     right: 8px;
     bottom: 15px;
 }
 
+.mypage-btn,
 .logout-btn{
     background-color: transparent;
     border: none;
     font-size: 18px !important;
 }
 
+.mypage-btn>a,
 .logout-btn>a{
     color: white;
 }

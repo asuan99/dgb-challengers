@@ -7,20 +7,28 @@
     <link rel="stylesheet" href="css/semantic.css">
     <link rel="stylesheet" href="css/tag.css">
     <link rel="stylesheet" href="css/snb.css">
+    <link rel="stylesheet" href="css/userSection.css">
     <link rel="stylesheet" href="css/mainContent.css">
-    <link rel="stylesheet" href="css/section1.css">
-    <link rel="stylesheet" href="css/retirementInfo.css">
+    <link rel="stylesheet" href="css/myPortfolio.css">
+    <link rel="stylesheet" href="css/cssprogress.css">
+    <link rel="stylesheet" href="css/cssprogress.min.css">
+    <link rel="stylesheet" href="css/comparisonPortfolio.css">
+    <link rel="stylesheet" href="css/inputRetirement.css">
+    <link rel="stylesheet" href="css/camperStory.css">
+
 
     <link rel="stylesheet" href="css/mainNews.css">
     <link rel="stylesheet" href="css/subNews.css">
-
     <link rel="stylesheet" href="css/jsOp.css">
+
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-pie.min.js"></script>
 
     <title>Document</title>
 </head>
 <body>
     <div class="wrapper">
-        <div class="js-snb none">
+        <div class="js-snb">
             <div class="snb">
                 <!-- profile 이미지와 이름 -->
                 <div class="profile">
@@ -37,34 +45,9 @@
 
                 <!-- user interface -->
                 <div class="category">
-                    <!-- mypage -->
-                    <div class="category-mypage-box">
+                    <div class="category-portfolio-box">
                         <div class="category-content">
-                            <div class="category-title">
-                                <span class="title">마이페이지</span>
-                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
-                            </div>
-                            <div class="category-more show">
-                                <div class="category-item clicked-item" id="portfolio_register">포트폴리오 등록</div>
-                                <div class="category-item" id="profile_update">프로필 수정</div>
-                                <div class="category-item" id="account_manage">계정 관리</div>
-                                <div class="category-item" id="account_remove">계정 탈퇴</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- retirement -->
-                    <div class="category-retirement--box">
-                        <div class="category-content">
-                            <div class="category-title">
-                                <span class="title">은퇴계산기</span>
-                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
-                            </div>
-                            <div class="category-more">
-                                <div class="category-item" id="retirement_input">은퇴계산기 입력</div>
-                                <div class="category-item" id="annual_return">연간 수익률</div>
-                                <div class="category-item" id="longterm_return">장기 수익률</div>
-                            </div>
+                            <div class="category-item show" id="input_retirement" style="padding-right: 30px"><span class="title">은퇴계산기</span></div>
                         </div>
                     </div>
 
@@ -76,9 +59,15 @@
                                 <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px">    
                             </div>
                             <div class="category-more">
-                                <div class="category-item" id="my_portfolio">내 포트폴리오</div>
-                                <div class="category-item" id="comparison_portfolio">포트폴리오 비교</div>
+                                <div class="category-item clicked-item" id="my_portfolio">내 포트폴리오</div>
+                                <div class="category-item" id="comparison_portfolio">포트폴리오 비교 & Rank</div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="category-portfolio-box">
+                        <div class="category-content">
+                            <div class="category-item show" id="camper_story" style="padding-right: 30px"><span class="title">캠퍼 이야기</span></div>
                         </div>
                     </div>
 
@@ -99,6 +88,10 @@
                     </div>
                 </div>
 
+                <div class="mypage">
+                    <button class="mypage-btn"><a href="">마이페이지</a></button>
+                </div>
+
                 <!-- logout Btn -->
                 <div class="logout">
                     <button class="logout-btn"><a href="./">로그아웃</a></button>
@@ -106,58 +99,503 @@
             </div>
         </div>
 
-        <div class="snb-open">
+        <div class="snb-open none">
             <img class="snb-btn" src="../image/snb_open.png" alt="" width="30px">
         </div>
 
         <main class="main-content">
-            <!-- mypage -->
-            <!-- portfolio_register -->
-            <section id="portfolio_register_content" class="user-content show">
-                portfolio_register
-            </section>
+            <!-- input_retirement -->
+            <section id="input_retirement_content" class="user-content">
+                <div class="input-retirement-content">
+                    <div class="input-retirement-main-content">
+                        <div class="input-retirement-info">
+                            <div class="input-retirement-info-title">
+                                경제적 자유를 위한 계산
+                            </div>
+                            <form class="input-retirement-form" action="">
+                                <div class="input-retirement-form-title">목표 월 수익</div>
+                                <input type="text" placeholder="월 수익을 입력해주세요.">
+                                <input type="submit" value="확인">
+                            </form>
+                            <form class="input-retirement-form" action="">
+                                <div class="input-retirement-form-title">연간 수익률</div>
+                                <input type="text" placeholder="연간 수익률을 입력해주세요.">
+                                <input type="submit" value="확인">
+                            </form>
+                            <form class="input-retirement-form" action="">
+                                <div class="input-retirement-form-title">월 납입금액</div>
+                                <input type="text" placeholder="월 납입금액을 입력해주세요.">
+                                <input type="submit" value="확인">
+                            </form>
+                        </div>
+                        <div class="input-retirement-reference-info">
+                            <div class="retirement-reference-box">
+                                <!-- 목표 월 수익, 연간 수익률, 월 납입금액에 따라 변동되는 박스 -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total-retirement-info-content">
+                        <span>은퇴 후 목표 수익</span>
+                        <input type="text" value="₩1,000,000,000" readonly>원을 받기까지
+                        <input type="text" value="" readonly>년
+                        <input type="text" value="" readonly>개월 걸립니다.
 
-            <!-- profile_update -->
-            <section id="profile_update_content" class="user-content">
-                profile_update
+                        <div class="start-camper-story">
+                            <button>시작하기</button>
+                        </div>
+                    </div>
+                    <div class="retirement-info-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td> <td>1년</td> <td>2년</td> <td>5년</td> <td>10년</td> <td>20년</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3.8%</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                </tr>
+                                <tr>
+                                    <td>5%</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                </tr>
+                                <tr>
+                                    <td>7%</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                </tr>
+                                <tr>
+                                    <td>9%</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                </tr>
+                                <tr>
+                                    <td>11%</td> <td></td> <td></td> <td></td> <td></td> <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </section>
-
-            <!-- account_manage -->
-            <section id="account_manage_content" class="user-content">
-                account_manage
-            </section>
-
-            <!-- account_remove -->
-            <section id="account_remove_content" class="user-content">
-                account_remove
-            </section>
-
-            <!-- retirement -->
-            <!-- retirement_input -->
-            <section id="retirement_input_content" class="user-content">
-                retirement_input
-            </section>
-
-            <!-- annual_return -->
-            <section id="annual_return_content" class="user-content">
-                annual_return
-            </section>
-
-            <!-- longterm_return -->
-            <section id="longterm_return_content" class="user-content">
-                longterm_return
-            </section>
-
 
             <!-- portfolio -->
             <!-- my_portfolio -->
-            <section id="my_portfolio_content" class="user-content">
-                my_portfolio
+            <section id="my_portfolio_content" class="user-content show">
+                <div class="my-portfolio-content">
+                    <article class="portfolio-left-content">
+                        <div id="my_portfolio_graph" class="my-portfolio-graph"></div>
+                        <div class="portfolio-archeive">
+                            <div class="annual-return">
+                                <h3>목표금액 달성률</h3>
+                                <div class="cssProgress">
+                                    <div class="progress1">
+                                        <div class="cssProgress-bar cssProgress-active" data-percent="75" style="width: 75%;">
+                                            <span class="cssProgress-label">75%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3>남은 기한</h3>
+                                <div class="cssProgress">
+                                    <div class="progress2">
+                                        <div class="cssProgress-bar cssProgress-success cssProgress-active" data-percent="65" style="width: 65%;">
+                                            <span class="cssProgress-label">65%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="final-goal">
+                                <div class="vertical-progress-bar">
+                                    <div class="retirement-vertical-progress"></div>
+                                </div>
+                                <div class="retirement-vertical-progress-percent">33%</div>
+                                <div class="todays-box">
+                                    <blockquote class="todays-maxim">
+                                        <q>비트코인? 넌 이런거 하지마라.</q> 
+                                    </blockquote>
+                                    <span id="todays_author">- 이원호</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="portfolio-right-content">
+                        <div class="my-portfolio-in">
+                            <div class="my-portfolio-in-title">
+                                증시 요약 정보
+                            </div>
+                            <div class="my-portfolio-in-content">
+                                <ul>
+                                    <li><a href="">38만가구, 집 등 자산 팔아도 빚 못 갚는다…69조원 시한..</a></li>
+                                    <li><a href="">[표] 주요국 증시 주간 동향</a></li>
+                                    <li><a href="">상장사 10개중 1개는 1년간 주가 반토막…"더 악화할 것"</a></li>
+                                    <li><a href="">증시요약(10) - 기술적 분석 특징주 B(코스닥)</a></li>
+                                    <li><a href="">[표] 주간 거래소 기관 순매수도 상위종목</a></li>
+                                </ul>
+                            </div>
+                            <div class="my-portfolio-in-more">
+                                <a href="">more</a>
+                            </div>
+                        </div>
+                        <div class="my-portfolio-in">
+                            <div class="my-portfolio-in-title">
+                                경제 뉴스 핫토픽
+                            </div>
+                            <div class="my-portfolio-in-content">
+                                <ul>
+                                    <li><a href="">38만가구, 집 등 자산 팔아도 빚 못 갚는다…69조원 시한..</a></li>
+                                    <li><a href="">[표] 주요국 증시 주간 동향</a></li>
+                                    <li><a href="">상장사 10개중 1개는 1년간 주가 반토막…"더 악화할 것"</a></li>
+                                    <li><a href="">증시요약(10) - 기술적 분석 특징주 B(코스닥)</a></li>
+                                    <li><a href="">[표] 주간 거래소 기관 순매수도 상위종목</a></li>
+                                </ul>
+                            </div>
+                            <div class="my-portfolio-in-more">
+                                <a href="">more</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
             </section>
 
             <!-- comparison_portfolio -->
             <section id="comparison_portfolio_content" class="user-content">
-                comparison_portfolio
+                <div class="comparison-portfolio-content">
+                    <div class="comparison-title">
+                        <span>포트폴리오 비교 & 랭킹</span>
+                    </div>
+
+                    <div class="rank-and-comparison-portfolio">
+                        <div class="rank-portfolio">
+                            <div class="rank-portfolio-title">
+                                포트폴리오 랭킹
+                            </div>
+
+                            <form class="search-user-form" action="get">
+                                <input class="search-user" type="text" placeholder="유저 검색창" name="search_user">
+                                <input class="submit-search-user" type="submit" value="검색">
+                            </form>
+
+                            <div class="rank-portfolio-tag">
+                                <button class="clicked-tag">수익률</button>
+                                <button>목표달성률</button>
+                                <button>랭킹</button>
+                            </div>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>순위</td> <td>닉네임</td> <td>금액</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><img src="../image/gold_medal.png" alt="" width="50px"></td> <td><a href="">김수석</a></td> <td>₩100,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2등</td> <td><a href="">황박사</a></td> <td>₩99,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3등</td> <td><a href="">나만없어고양이</a></td> <td>₩88,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4등</td> <td><a href="">나도1등</a></td> <td>₩77,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5등</td> <td><a href="">치킨집차리자</a></td> <td>₩66,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6등</td> <td><a href="">제드팀</a></td> <td>₩55,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7등</td> <td><a href="">대출은 리드코프</a></td> <td>₩44,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8등</td> <td><a href="">youtube_kk</a></td> <td>₩33,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9등</td> <td><a href="">워뇨띠</a></td> <td>₩22,000,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10등</td> <td><a href="">고양이에옹</a></td> <td>₩11,000,000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="rank-portfolio-more">
+                                <button>더 보기..</button>
+                            </div>
+                        </div>
+                        <div class="comparison-portfolio">
+                            <div class="portfolio-contents-box">
+                                <div class="portfolio-content-for-comparison">
+                                    <div id="my_portfolio_graph_for_comparison" class="comparison-portfolio-vs"></div>
+    
+                                    <div class="portfolio-progress-box">
+                                        <div class="annual-return progress-for-comparison">
+                                            <h3>목표금액 달성률</h3>
+                                            <div class="cssProgress">
+                                                <div class="progress1">
+                                                    <div class="cssProgress-bar cssProgress-active" data-percent="20" style="width: 20%;">
+                                                        <span class="cssProgress-label">20%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3>남은 기한</h3>
+                                            <div class="cssProgress">
+                                                <div class="progress2">
+                                                    <div class="cssProgress-bar cssProgress-success cssProgress-active" data-percent="75" style="width: 75%;">
+                                                        <span class="cssProgress-label">75일</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="vertical-progress">
+                                            <div class="vertical-progress-bar vertical-for-comparison">
+                                                <div class="retirement-vertical-progress my-vertical-progress"></div>
+                                            </div>
+                                            <div class="my-percent-for-comparison">5%</div>
+                                            <span class="retirement-vertical-title">은퇴 달성률</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-content-for-comparison">
+                                    <div id="user_portfolio_graph" class="comparison-portfolio-vs"></div>
+    
+                                    <div class="portfolio-progress-box">
+                                        <div class="annual-return progress-for-comparison">
+                                            <h3>목표금액 달성률</h3>
+                                            <div class="cssProgress">
+                                                <div class="progress1">
+                                                    <div class="cssProgress-bar cssProgress-active" data-percent="75" style="width: 75%;">
+                                                        <span class="cssProgress-label">75%</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3>남은 기한</h3>
+                                            <div class="cssProgress">
+                                                <div class="progress2">
+                                                    <div class="cssProgress-bar cssProgress-success cssProgress-active" data-percent="29" style="width: 29%;">
+                                                        <span class="cssProgress-label">29일</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="vertical-progress">
+                                            <div class="vertical-progress-bar vertical-for-comparison">
+                                                <div class="retirement-vertical-progress user-vertical-progress"></div>
+                                            </div>
+                                            <div class="user-percent-for-comparison">85%</div>
+                                            <span class="retirement-vertical-title">은퇴 달성률</span>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vs-portfolio-main-content">
+                                <div class="vs-portfolio-box">
+                                    <div class="vs-portfolio-title">
+                                        포트폴리오 비교
+                                    </div>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>공격적</td> <td class="question">투자 성향</td> <td>안정적</td>
+                                            </tr>
+                                            <tr>
+                                                <td>20%</td> <td class="question">목표금액 달성률</td> <td>75%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5%</td> <td class="question">은퇴 달성률</td> <td>85%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>성장주, 우량주</td> <td class="question">투자 종목</td> <td>우량주, 가치주</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- camper_story -->
+            <section id="camper_story_content" class="user-content">
+                <div class="camper-story-content">
+                    <div class="camper-story-category">
+                        <button id="retirement_story" class="camper-category clicked-story">은퇴자 이야기</button>
+                        <button id="sharing_info" class="camper-category">정보 공유</button>
+                        <button id="worried_story" class="camper-category">고민 이야기</button>
+                    </div>
+                    <div class="camper-story-category-content">
+                        <div class="camper-story-main-content-box">
+                            <div class="camper-story-main-content">
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="http://www.kwangju.co.kr/upimages/gisaimg/201309/26_506974.jpg" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">김수석</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dicta ducimus sint consequatur cupiditate accusamus laudantium pariatur optio, quia ea repellat porro molestiae minus. Similique error enim dolor corporis eum.</p>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="https://newsimg.sedaily.com/2019/07/15/1VLPD210XD_1.jpg" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">황박사</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dicta ducimus sint consequatur cupiditate accusamus laudantium pariatur optio, quia ea repellat porro molestiae minus. Similique error enim dolor corporis eum.</p>
+                                        <h3>Coin is best Choice.</h3>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FtEMUl%2FbtrDc6957nj%2FNwJoDw0EOapJNDSNRNZK8K%2Fimg.jpg" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">나만없어고양이</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <p>고양이를 키우자.</p>
+                                        <p>고양이에옹이는 최고에옹</p>
+                                        <p>고양이를 키우시면 저 처럼 돈을 많이 벌 수 있냐옹</p>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="camper-story-main-content">
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="http://www.kwangju.co.kr/upimages/gisaimg/201309/26_506974.jpg" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">나도1등</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <p>1등 따라하면 당신도 돈 벌수 있습니다. 쉽죠? 네 누구나 다 가능합니다.</p>
+                                        <p>저도 1등 따라서 4등이나 했어요. 따라오세요</p>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="https://www.pngmart.com/files/16/Crunchy-KFC-Chicken-PNG-Pic.png" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">치킨집차리자</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <p>여러분 치킨은 진리입니다.</p>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                                <div class="camper-story-article">
+                                    <div class="camper-story-article-top">
+                                        <div class="camper-story-user-image">
+                                            <img src="https://obj-sg.thewiki.kr/data/7a65645f436c61737369632e6a7067.jpg" alt="">
+                                        </div>
+                                        <div class="camper-story-user-info">
+                                            <span class="camper-story-author">제드팀</span>
+                                            <div class="camper-story-date">2022.10.09</div>    
+                                        </div>
+                                    </div>
+                                    <div class="camper-story-article-content">
+                                        <h2>롤하면서 돈 모으는 방법 대방출</h2>
+                                        <p>1. 아무 코인을 탄다.</p>
+                                        <p>2. 롤을 한다.</p>
+                                        <p>3. 코인이 오르기를 기다린다. 그리.....</p>
+                                    </div>
+                                    <div class="camper-story-article-more">
+                                        <button>더 보기</button>
+                                    </div>
+                                </div>
+                                <div class="camper-story-more">
+                                    <button>글 목록</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="camper-story-hot-article">
+                            <div class="camper-hot-title">
+                                <h2>인기 게시글</h2>
+                            </div>
+                            <div class="camper-hot-article">
+                                <div class="camper-hot-article-content">
+                                    <div class="camper-hot-article-rank">
+                                        <img src="../image/gold_medal.png" alt="" width="50px">
+                                        <span class="recommendation-text">추천수: 57,232</span>
+                                    </div>
+                                    <div class="camper-story-article">
+                                        <div class="camper-story-article-top">
+                                            <div class="camper-story-user-image">
+                                                <img src="http://www.kwangju.co.kr/upimages/gisaimg/201309/26_506974.jpg" alt="">
+                                            </div>
+                                            <div class="camper-story-user-info">
+                                                <span class="camper-story-author">김수석</span>
+                                                <div class="camper-story-date">2022.10.09</div>    
+                                            </div>
+                                        </div>
+                                        <div class="camper-story-article-content">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dicta ducimus sint consequatur cupiditate accusamus laudantium pariatur optio, quia ea repellat porro molestiae minus. Similique error enim dolor corporis eum.</p>
+                                        </div>
+                                        <div class="camper-story-article-more">
+                                            <button>더 보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="camper-hot-article-content">
+                                    <div class="camper-hot-article-rank">
+                                        <img src="../image/silver_medal.png" alt="" width="48px">
+                                        <span class="recommendation-text">추천수: 28,232</span>
+                                    </div>
+                                    <div class="camper-story-article">
+                                        <div class="camper-story-article-top">
+                                            <div class="camper-story-user-image">
+                                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Anonymous_emblem.svg" alt="">
+                                            </div>
+                                            <div class="camper-story-user-info">
+                                                <span class="camper-story-author">18년졸업</span>
+                                                <div class="camper-story-date">2018.10.09</div>    
+                                            </div>
+                                        </div>
+                                        <div class="camper-story-article-content">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit dicta ducimus sint consequatur cupiditate accusamus laudantium pariatur optio, quia ea repellat porro molestiae minus. Similique error enim dolor corporis eum.</p>
+                                        </div>
+                                        <div class="camper-story-article-more">
+                                            <button>더 보기</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <!-- news -->
@@ -613,111 +1051,8 @@
         </main>
     </div>
 
-    <!-- 올해 목표 수익률 -->
-    <section class="main-top-section none">
-        <article class="greet-user">
-            <div class="welcome-user">어서오세요, &nbsp <span class="text-color">이원호</span>님!</div>
-            <div class="rate-year-font"><span class="text-color">이원호</span>님의 &nbsp 올해 목표 수익률</div>
-            <!-- 목표 수익률 progress bar (미완성, js 동작 추가 필요) -->
-            <div class="rate-year">
-                <!-- 현재 진행상황도에 따라  left px 증가하는 형식으로 이동 (img 파일, ex 자동차)-->
-                <div class="rate-year-move">
-                    <img src="../image/car_rate.png" alt="" width="64px" style="vertical-align:bottom">
-                </div>
-
-                <!-- 퍼센트에 맞게 변하는 색상 삽입 필요 -->
-                <div class="rate-year-progress"></div>
-
-                <div class="rate-year-line"></div>
-
-                <!-- 퍼센트 값, 위치도 위 이미지의 위치에 맞게 변경 필요 -->
-                <div class="rate-year-percent">
-                    0%
-                </div>
-            </div>
-        </article>
-        <aside class="portfolio">
-            <div class="user-portfolio"><span class="text-color">이원호</span>님의 포트폴리오</div>
-            <div class="portfolio-info"></div>
-        </aside>
-    </section>
-
-    <!-- 그룹내 목표 달성률 -->
-    <section class="main-bot-section none">
-        <article>
-            <div class="user-group">
-                <span class="text-color">이원호</span>님과 비슷한 목표 금액 &nbsp</span>
-                <span class="text-color">10-50억</span>
-                <span>을 가진 사람은 &nbsp <a class="text-color" href="#">127</a>명, </span>
-                <span>이 중 목표달성률이 &nbsp<a class="text-color" href="#">12</a>번째에요.</span>
-            </div>
-
-            <!-- 그룹내 목표 달성률 progress bar(미완성, js 동작 추가) -->
-            <div class="rate-group">
-                <!-- 현재 진행상황도에 따라 left px 증가하는 형식으로 이동 -->
-                <!-- 그림 아기 -> 학생 -> 어른 -> 할아버지 등 변화하는 이미지 -->
-                <div class="rate-group-move">
-                    <img src="../image/baby_rate.png" alt="" width="64px" style="vertical-align:bottom">
-                </div>
-
-                <!-- right 640px -> 0px percent에 맞춰 이동 -->
-                <div class="rate-group-progress"></div>
-
-                <div class="rate-group-line"></div>
-
-                <!-- 퍼센트 위치도 위 이미지의 위치에 맞게 변경 필요 -->
-                <div class="rate-group-percent">0%</div>
-            </div>
-        </article>    
-    </section>
-    
-    <!-- 은퇴계산기 관련 정보 -->
-    <section class="retirement-info-section none">
-        <article>
-            <!-- 은퇴자들의 노하우 공유 게시글 -->
-            <div class="retirement-shared-info">
-                <div class="retirement-shared-info-title">
-                    <span>은퇴한 사람들의 노하우를 공유해드려요!</span>
-                </div>
-                <div class="retirement-user-post">
-                    <!-- 커뮤니티에 작성된 글을 당겨옴 -->
-                    <div class="user-know-how">
-                        <a href="">코인으로 인생 졸업하는 초 간단 방법 - 강병준</a>
-                    </div>
-                    <div class="user-know-how">
-                        <a href="">졸업기념 매매방식 공유 (내용추가) - 이영수</a>
-                    </div>
-                    <div class="user-know-how">
-                        <a href="">비트코인 졸업자의 글 - 이원호</a>
-                    </div>
-                    <div class="user-know-how">
-                        <a href="">졸업기념 매매방식 공유 - 권용문</a>
-                    </div>
-                    <div class="user-know-how">
-                        <a href="">졸업기념 매매방식 공유 - 황현동</a>
-                    </div>
-                </div>
-                <div class="retirement-user-post-more">
-                    <a href="">더 보기</a>
-                </div>
-            </div>
-        </article>
-
-        <article>
-            <!-- 은퇴 계산기를 바탕으로의 정보 제시 -->
-            <div class="retirement-user-info">
-                은퇴까지 연간 <span class="text-color">rate_of_return</span>%의 수익률을 달성하면
-                월 <span class="text-color">cost_of_month</span>원 생활비를 사용할 수 있어요.
-                <ul>
-                    <li>소비자물가 상승률 <span class="text-color">inflation rate</span>%</li>
-                    <li>국고채 3년을 평균 금리 <span class="text-color">sovereign_yield</span>%</li>
-                    <li>은퇴까지 <span class="text-color">retirement_year</span>년 남았어요.</li>
-                    <li>보유자산 <span class="text-color">user_holdings</span>원 있어요.</li>
-                </ul>
-            </div>
-        </article>
-    </section>
-
+    <script src="js/loadCamperStory.js"></script>
+    <script src="js/portfolioChart.js"></script>
     <script src="js/snbLoading.js"></script>
     <script src="js/loadAccident.js"></script>
     <script src="js/snbResizing.js"></script>
