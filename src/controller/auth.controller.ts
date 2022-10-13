@@ -3,6 +3,7 @@ import { ControllerDefaultClass } from '../../framework/controllers/common';
 import { RequestData } from '../../framework/modules/router/types';
 import { RouterApiSpec } from '../../framework/modules';
 import { AuthService } from '../service/';
+import {alert,window}from '../util/script';
 //import {validator} from "../util/validator";
 declare module 'express-session' {
     export interface SessionData {
@@ -14,8 +15,10 @@ class AuthController implements ControllerDefaultClass {
     
     private authPage(api:RouterApiSpec){
         return async(req:express.Request,res:express.Response,next:express.NextFunction)=>{
-
-            res.render('auth');
+            res.write("<script>alert('duplicated')</script>");
+            res.write("<script>window.location=\"/\"</script>");
+            res.send();
+            //res.render('auth');
         }
     }
 
@@ -33,32 +36,30 @@ class AuthController implements ControllerDefaultClass {
     private signUp(){
         const service = new AuthService().default;
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {
-            const result = await service.signUp(req.body);
-            if(result.status==='duplicated'){
-                res.render('index',{Status:'duplicated'});
-            }
-            else if (result.status==='success'){
-                res.render('index',{Status:'signup_success'});
-            }
 
-            res.redirect('/');
+            const result = await service.signUp(req.body);
+            
+                res.write(alert(result.status));
+                res.write(window('/'));
+            
+            // else if (result.status==='success'){
+            //     res.render('index',{Status:'signup_success'});
+            // }
+
+            // res.redirect('/');
         }
     }
     private signIn(){
         const service = new AuthService().default;
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {
             const result = await service.signIn(req.body);
+            console.log(result);
+            if(result.status==='success')
+                req.session.user =result.user_email;  
             
-            if(result.status==='success'){
-                req.session.user =result.user_email;
-                res.render('index',{status:'signin_success'});
-            }
-            else if(result.status==='nouser'){
-                res.render('index',{status:'nouser'});
-            }
-            else if(result.status==='fail'){
-                res.render('index',{status:'fail'});
-            }
+            res.write(alert(result.status));
+            res.write(window('/'));
+            req.session.save();
 
         }
     }
