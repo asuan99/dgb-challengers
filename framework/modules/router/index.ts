@@ -14,7 +14,7 @@ class RouterModule implements ModuleDefaultClass {
   public init(app: Express, args?: any): void {
     const _schema = Object.entries(this.schema);
 
-    const info: { method: string; url: string, success: boolean }[] = [];
+    const info: { name:string,method: string; url: string, success: boolean }[] = [];
 
     _schema.forEach(([key, api]) => {
       let isRegistered = false;
@@ -22,8 +22,8 @@ class RouterModule implements ModuleDefaultClass {
         app[api.method](api.url, this.routeFunctions[key](api));
         isRegistered = true;
       }
-
       info.push({
+        name : key, 
         method: api.method.toLocaleUpperCase(),
         url: api.url,
         success: isRegistered,

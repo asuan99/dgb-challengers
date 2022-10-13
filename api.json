@@ -63,5 +63,13 @@
     "signIn":{
         "url":"/user/signin",
         "method":"post"
+    },
+    "account":{
+        "url":"/finance/account",
+        "method":"get"
+    },
+    "withdrawl":{
+        "url":"/user/withdrawl",
+        "method":"get"
     }
 }

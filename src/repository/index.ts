@@ -1,2 +1,3 @@
 import AuthRepository from "./auth.repository";
-export {AuthRepository};
+import FinanceRepository from "./finance.repository";
+export {AuthRepository,FinanceRepository};

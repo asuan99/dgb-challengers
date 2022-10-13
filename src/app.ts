@@ -4,7 +4,7 @@ import path from 'path';
 
 import Framework from '../framework';
 import { ErrorBoundaryModule, RouterModule } from '../framework/modules';
-import { AuthController, PageController } from './controller';
+import { AuthController, FinanceController, PageController } from './controller';
 import mongoose from 'mongoose';
 import './util/env';
 const { MONGO_URI } = process.env;
@@ -30,6 +30,7 @@ const framework = new Framework({
                 path: path.join(process.cwd(),'/api.json'), routeFunctions: {
                     ...(new PageController()).default,
                     ...(new AuthController()).default,
+                    ...(new FinanceController()).default,
                 }
             }),
             errorBoundary: new ErrorBoundaryModule(),
