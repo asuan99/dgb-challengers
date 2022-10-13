@@ -11,8 +11,9 @@ class AuthRepository {
     private async findUserByEmail(email:string){
       return (await UserSchema.findOne({user_email:email}));
     }
-    private async createToken(email : string,dto:TokenDto){
-      const user = await UserSchema.findOneAndUpdate({user_email:email},{...dto});
+    private async createToken(email : string,token:TokenDto){
+      const user = await UserSchema.findOneAndUpdate({user_email:email},{...token});
+      return user;
     }
     private async checkDuplicateEmail(email:string){
       return Boolean(await UserSchema.findOne({user_email:email}));

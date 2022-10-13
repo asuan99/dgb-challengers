@@ -15,10 +15,13 @@ class AuthController implements ControllerDefaultClass {
     
     private authPage(api:RouterApiSpec){
         return async(req:express.Request,res:express.Response,next:express.NextFunction)=>{
-            res.write("<script>alert('duplicated')</script>");
-            res.write("<script>window.location=\"/\"</script>");
-            res.send();
-            //res.render('auth');
+            const service = new AuthService().default;
+            const user = req.session.user;
+            console.log(user);
+            if(user)
+                service.authorize(user);
+            else
+                res.redirect('/');
         }
     }
 
@@ -27,10 +30,10 @@ class AuthController implements ControllerDefaultClass {
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {
             
             const code:string|undefined = String(req.query.code)||'';
-            const user = req.session.user||'';
-            const result:any = await service.authorize(code,user);
+            const user : string|undefined = req.session.user||"";
+            //const result:any = await service.authorize(code,user);
             
-            res.render('resultChild',{data:result});
+            //res.render('resultChild',{data:result});
         }
     }
     private signUp(){

@@ -1,31 +1,40 @@
 import { FinanceRepository } from "../repository";
 import axios from 'axios';
 class FinanceService{
-    private async account(email:string){
+    private async overseas_account(email:string){
         const repository = new FinanceRepository().default;
         const token = await repository.getToken(email);
-        console.log(token);
-        const header = {
-            'Authorization':'Bearer '+token?.accessToken
+        
+        const headers : any = {
+            'authorization' : `Bearer ${token?.accessToken}`,
+            'Content-Type': 'application/json; charset=utf-8',
+            'appkey' : process.env.FINANCIAL_CLIENT_KEY,
+            'appsecret' : process.env.FINANCIAL_SECRET_KEY,
+            'tr_id' : 'VTTT3012R',
+        };
+        const params = {
+            'CANO' : '50073685',
+            'ACNT_PRDT_CD': '01',
+            'OVRS_EXCG_CD' : "NASD",
+            'TR_CRCY_CD' : 'USD',
+            'CTX_AREA_FK200' : "",
+            'CTX_AREA_NK200' : "",
         }
-        const param = {
-            'user_seq_no':token?.user_seq
+        try{
+        const result = await axios.get('https://openapivts.koreainvestment.com:29443/uapi/overseas-stock/v1/trading/inquire-balance',
+        {headers:headers,params:params});
+        console.log((result.data.output1));
         }
-        const json = await axios.get('https://testapi.openbanking.or.kr/v2.0/user/me',
-        {headers:header,params:param})
-        const use_list = json.data.res_list.map((temp:any) =>temp.fintech_use_num);
-        console.log(use_list);
-        //List들이 넘어옴.
-        //fintech_use_num 을 통해서 잔액조회등 가능
-        //은행거래고유번호는 process.env.ORGANIZATIONID + U + 난수 9자리
-        return json;
+        catch(err){console.error(err);}
+        
     }
+
     private async transaction(list:string){
         
     }
     get default(){
         return {    
-            account:this.account,
+            domestic_account:this.domestic_account
         }
     }
 }

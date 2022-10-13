@@ -9,8 +9,6 @@ interface SignInDto {
 }
 interface TokenDto{
   accessToken : string;
-  refreshToken : string;
-  user_seq : string;
 }
 
 export type { SignUpDto, SignInDto , TokenDto };

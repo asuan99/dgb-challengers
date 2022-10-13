@@ -8,32 +8,28 @@ import { AuthRepository } from '../repository';
 
 class AuthService {
     constructor() { }
-    private async authorize(code:string,user:string) {
-        const redirect_uri = `http://localhost:${process.env.PORT}/financial/auth/callback`
-        const data = {
-            'code':code,
-            'client_id': process.env.FINANCIAL_CLIENT_KEY,
-            'redirect_uri': redirect_uri,
-            'grant_type':'authorization_code',
-            'client_secret': process.env.FINANCIAL_SECRET_KEY,
-        }
-        const header = {
-            'content-Type':'application/x-www-form-urlencoded'
-        }
-        const json = await axios.post("https://testapi.openbanking.or.kr/oauth/2.0/token",QueryString.stringify(data),{
-            headers:header
-        })
-        const dto = {
-            'accessToken':json.data.access_token,
-            'refreshToken':json.data.refresh_token,
-            'user_seq':json.data.user_seq_no,
-        }
+    private async authorize(user:string) {
         const repository = new AuthRepository().default;
-        repository.createToken(user,dto);
+        const body = {
+            "grant_type": "client_credentials",
+            "appkey": process.env.FINANCIAL_CLIENT_KEY,
+            "appsecret":  process.env.FINANCIAL_SECRET_KEY
+          }
+        const data = await (await axios.post('https://openapivts.koreainvestment.com:29443/oauth2/tokenP',body)).data;
         
-
-        return json.data;
+        const dto = {
+            'accessToken':data.access_token
+        }
+        try{
+        const result = await repository.createToken(user,dto);
+        console.log(result);
+        }
+        catch(e){
+            console.error(e);
+        }
+        //return json.data;
     }
+
     private async signUp(dto:SignUpDto){
         const repository = new AuthRepository().default;
         if (await repository.checkDuplicateEmail(dto.uesr_email)) {
