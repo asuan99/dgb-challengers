@@ -18,6 +18,7 @@ class AuthController implements ControllerDefaultClass {
             const service = new AuthService().default;
             const user = req.session.user;
             console.log(user);
+            
             if(user)
                 service.authorize(user);
             else
