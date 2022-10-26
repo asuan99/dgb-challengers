@@ -8,11 +8,13 @@ class FinanceController implements ControllerDefaultClass{
         return async(req:express.Request,res:express.Response,next:express.NextFunction)=>{
             const service = new FinanceService().default;
             const user = req.session.user||'';
-            //const result = await service.domestic_account(user);
-            await service.overseas_account(user);
+            
+            const result = await service.account(user);
+            
             res.render('/');
         }
     }
+    
 
 
     get default(){

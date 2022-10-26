@@ -47,7 +47,8 @@
                         <% if(id == null) { %>
                             <div class="gnb-item js-login">로그인</div>
                         <% } else { %>
-                            <div class="gnb-item js-logout">로그아웃</div>
+                            <div class="gnb-item js-logout">
+                                <a href="/user/withdrawl">로그아웃</a></div>
                         <% } %>
                     </div>
                 </div>
@@ -255,6 +256,13 @@
         <div class="overlay none"></div>
         <button id="scrollTopBtn" style="visibility: hidden;"><a href="#header">TOP</a></button>
     </div>
+
+    <script>
+        function clickLogout() {
+            window.href = '/user/withdrawl';
+            console.log()
+    } 
+    </script>
 
     <script src="js/startUser.js"></script>
     <script src="js/slideIndex.js"></script>

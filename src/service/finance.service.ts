@@ -1,5 +1,6 @@
 import { FinanceRepository } from "../repository";
 import axios from 'axios';
+import { StockDto } from "../dto";
 class FinanceService{
     private async overseas_account(email:string){
         const repository = new FinanceRepository().default;
@@ -23,12 +24,16 @@ class FinanceService{
         try{
         const result = await axios.get('https://openapivts.koreainvestment.com:29443/uapi/overseas-stock/v1/trading/inquire-balance',
         {headers:headers,params:params});
-        console.log((result.data.output1));
+        return result.data.output1;
         }
         catch(err){console.error(err);}
         
     }
     private async domestic_account(email:string){
+        /**
+         * @description domestic_account 함수 입니다.
+         */
+
         const repository = new FinanceRepository().default;
         const token = await repository.getToken(email);
         const headers : any = {
@@ -53,19 +58,47 @@ class FinanceService{
             'PRCS_DVSN':'01'
         }
         try{
-            const result = await axios.get('https://openapivts.koreainvestment.com:29443/uapi/overseas-stock/v1/trading/inquire-balance',
+            const result = await axios.get('https://openapivts.koreainvestment.com:29443/uapi/domestic-stock/v1/trading/inquire-balance',
             {headers:headers,params:params});
-            console.log((result.data.output1));
+            return result.data.output1;
             }
             catch(err){console.error(err);}
     }
-    private async transaction(list:string){
+    private async account(email:string){
+        const domestic_account = await this.domestic_account(email)
+        const overseas_account = await this.overseas_account(email)
         
+        
+        let StockList:StockDto[] = [];
+        for (const stock of domestic_account){
+            const json:StockDto = {
+                code : 'k',
+                pdno : stock.pdno,         //번호
+                name : stock.prdt_name,        //이름
+                evlu_pfls_rt : stock.evlu_pfls_rt,   //수익률
+                pchs_amt : stock.pchs_amt,      //구매금액
+                evlu_amt : stock.evlu_amt       // 현재금액(평가금액)
+            }
+            StockList.push(json);
+        }
+        for (const stock of overseas_account){
+            const json:StockDto={
+                code : 'u',
+                pdno : stock.ovrs_pdno,
+                name : stock.ovrs_item_name,
+                evlu_pfls_rt : stock.evlu_pfls_rt,
+                pchs_amt : stock.pchs_avg_pric,
+                evlu_amt : stock.frcr_evlu_pfls_amt,
+            }
+            StockList.push(json);
+        }
+        console.log(StockList);
     }
     get default(){
         return {    
             domestic_account:this.domestic_account,
-            overseas_account:this.overseas_account
+            overseas_account:this.overseas_account,
+            account : this.account,
         }
     }
 }
