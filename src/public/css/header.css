@@ -46,6 +46,16 @@ input[type=search] {
     cursor: pointer;   
 }
 
+.gnb-item button {
+    all: unset;
+
+    cursor: pointer;
+}
+
+.gnb-item a {
+    color: white;
+}
+
 .js-login, .js-logout{
     padding-right: 64px;
 }

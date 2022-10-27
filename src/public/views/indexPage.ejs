@@ -40,10 +40,18 @@
                     </div>
 
                     <div class="gnb">
-                        <div class="gnb-item">뉴스</div>
-                        <div class="gnb-item">랭킹</div>
-                        <div class="gnb-item">커뮤니티</div>
-                        <div class="gnb-item">고객센터</div>
+                        <div class="gnb-item">
+                            <button onClick="OnClickNotImplement()">뉴스</button>
+                        </div>
+                        <div class="gnb-item">
+                            <button onClick="OnClickNotImplement()">랭킹</button>
+                        </div>
+                        <div class="gnb-item">
+                            <button onClick="OnClickNotImplement()">커뮤니티</button>
+                        </div>
+                        <div class="gnb-item">
+                            <button onClick="OnClickNotImplement()">고객센터</button>
+                        </div>
                         <% if(id == null) { %>
                             <div class="gnb-item js-login">로그인</div>
                         <% } else { %>
@@ -264,6 +272,11 @@
     } 
     </script>
 
+    <script>
+        function OnClickNotImplement() {
+            alert("Not Implemented");
+        }
+    </script>
     <script src="js/startUser.js"></script>
     <script src="js/slideIndex.js"></script>
     <script src="js/topMove.js"></script>
