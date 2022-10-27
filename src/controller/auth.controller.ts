@@ -43,7 +43,7 @@ class AuthController implements ControllerDefaultClass {
 
             const result = await service.signUp(req.body);
             
-                res.write(alert(result.status));
+                // res.write(alert(result.status));
                 res.write(window('/'));
             
             // else if (result.status==='success'){
@@ -61,7 +61,7 @@ class AuthController implements ControllerDefaultClass {
             if(result.status==='success')
                 req.session.user =result.user_email;  
             
-            res.write(alert(result.status));
+            // res.write(alert(result.status));
             res.write(window('/'));
             req.session.save();
 
