@@ -1,8 +1,8 @@
 .main-section{
     display: flex;
     position: relative;
-    padding: 144px;
-    height: 70vh;
+    padding: 108px;
+    height: 600px;
 }
 
 .js-slide{
