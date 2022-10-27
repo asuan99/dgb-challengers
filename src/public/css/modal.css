@@ -10,6 +10,7 @@
 
     background-color: white;
     border: 1px solid gray;
+    opacity: 0.8;
 }
 
 .modal-logo{
@@ -72,14 +73,15 @@
     overflow: hidden;
 }
 
-.signIn-box {
+.sign-box {
     padding: 3px 8px;
     width: 100%;
     border: none;
     margin: 16px 0;
 }
 
-.signIn-box>input[type=text] {
+.sign-box input[type=text],
+.sign-box input[type=password] {
     width: 80%;
     border: none;
     border-bottom: 1px solid gray;
@@ -97,24 +99,9 @@
 
 .submit-signIn>input, .submit-signUp>input{
     border: none;
+    background-color: transparent;
     font-size: 24px;
     cursor: pointer;
-}
-
-.signUp-box {
-    padding: 3px 8px;
-    width: 100%;
-    border: none;
-    margin: 16px 0;
-}
-
-.signUp-box>input{
-    width: 80%;
-    border: none;
-    border-bottom: 1px solid gray;
-    margin: 10px 0;
-    padding-inline-start: 5px;
-    font-size: 20px;
 }
 
 .auth-for-signup{
