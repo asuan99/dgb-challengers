@@ -1,22 +1,21 @@
-const accident_btns = document.querySelectorAll(".accident-btn");
+const accident_btns = document.querySelectorAll(".accident-btn"),
+    accident_date = document.querySelector("#accident_date");
 
 const HOVERED = "js-hover"
 
-function mouseOverBtn(){
+function clickAccident(){
     accident_btns.forEach(accident_btn => {
-        accident_btn.addEventListener("mouseover", (event) => {
-            console.log(event);
-            accident_btn.classList.add(HOVERED);
-
-            accident_btn.addEventListener("mouseout", () => {
-                accident_btn.classList.remove(HOVERED);
-            })
+        accident_btn.addEventListener("click", (event) => {
+            accident_date.innerText = `${accident_btn.value}`;
+            
         })
     })
 }
 
 function init(){
-    mouseOverBtn();
+    clickAccident();
+
+    console.log(accident_date);
 }
 
 init();

@@ -71,12 +71,8 @@ class AuthController implements ControllerDefaultClass {
         return async (req: express.Request, res: express.Response,next:express.NextFunction) => {
             req.session.destroy((err)=>console.error(err));
             res.redirect('/');
-
         }
     }
-
-
-
 
     get default() {
         return {
