@@ -86,3 +86,4 @@ class AuthController implements ControllerDefaultClass {
 }
 
 export default AuthController;
+

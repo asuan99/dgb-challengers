@@ -4,7 +4,6 @@ import { RequestData } from '../../framework/modules/router/types';
 import { RouterApiSpec } from '../../framework/modules';
 import { PageService } from '../service/';
 import {validator} from "../util/validator";
-import * as axios from 'axios';
 import createHttpError from 'http-errors';
 
 class PageController implements ControllerDefaultClass {

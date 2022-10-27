@@ -1,5 +1,6 @@
 import UserSchema from './schema/user';
+import CalcSchema from './schema/calc';
 
+export {UserSchema,CalcSchema};
 
-export {UserSchema};
-export default {UserSchema};
+export default {UserSchema,CalcSchema};

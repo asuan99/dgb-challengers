@@ -22,8 +22,18 @@
 
     <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
     <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-pie.min.js"></script>
-
-    <title>자산 관리</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <title>Document</title>
+    <script>
+        $.ajax({
+            url:'/finance/account',
+            type:'GET',
+            success : (data)=>{
+                console.log(data);
+            }
+            
+        })
+    </script>
 </head>
 <body>
     <div class="wrapper">

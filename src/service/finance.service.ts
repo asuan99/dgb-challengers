@@ -92,7 +92,7 @@ class FinanceService{
             }
             StockList.push(json);
         }
-        console.log(StockList);
+        return StockList;
     }
     get default(){
         return {    
