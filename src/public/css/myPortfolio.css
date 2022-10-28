@@ -3,9 +3,9 @@
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    gap: 120px;
-    background: transparent url("../image/accident_background.jpg") no-repeat;
+    justify-content: center;
+    /* background: transparent url("../image/accident_background.jpg") no-repeat; */
+    gap: 96px;
 }
 
 .portfolio-left-content{
@@ -23,7 +23,7 @@
 
 .my-portfolio-graph {
     width: 864px;
-    height: 432px;
+    height: 540px;
 }
 
 .portfolio-right-content{
@@ -86,32 +86,6 @@
     flex-grow: 1;
     display: flex;
     flex-direction: row;
-}
-
-.vertical-progress-bar{
-    position: relative;
-    width: 100px;
-    margin: 0 30px;
-    border: 1px solid white;
-    overflow: hidden;
-    background-color: white;
-}
-
-/* height, bottom, percent.innerHTML 내용 변경해주면됨 */
-.retirement-vertical-progress{
-    height: 33%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 128, 0, 0.8);
-}
-
-.retirement-vertical-progress-percent{
-    position: absolute;
-    bottom: 33%;
-    left: -15px;
-    color: white;
 }
 
 .todays-box{

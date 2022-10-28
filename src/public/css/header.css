@@ -8,7 +8,6 @@
 .logo-box{
     display: inline-flex;
     flex-direction: row;
-    gap: 24px;
 }
 
 .logo-detail{
@@ -16,7 +15,11 @@
     
     justify-content: space-between;
     align-items: center;
-    font-size: 23px;
+}
+
+.logo-name{
+    font-size: 32px;
+    font-family: 'Permanent Marker';
 }
 
 input[type=search] {

@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="css/subNews.css">
     <link rel="stylesheet" href="css/jsOp.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 
     <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js"></script>
     <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-pie.min.js"></script>
@@ -32,13 +35,13 @@
                 <!-- profile 이미지와 이름 -->
                 <div class="profile">
                     <div class="profile-image">
-                        <img src="../image/retire_image.jpg" alt="" width="64px" height="48px" style="vertical-align: middle;" loading="lazy">
+                        <img src="../image/logo.png" alt="" width="64px" height="48px" style="vertical-align: middle;" loading="lazy">
                     </div>
                     <div class="profile-name">
-                        <span class="text-color">이원호</span>님 환영합니다!
+                        <span class="logo-name">Campfire</span>
                     </div>
                     <div class="snb-close">
-                        <img class="snb-btn" src="../image/snb_close.png" alt="" width="30px" loading="lazy">
+                        <img class="snb-btn img-filter-invert" src="../image/snb_close.png" alt="" width="30px" loading="lazy">
                     </div>    
                 </div>
 
@@ -55,7 +58,7 @@
                         <div class="category-content">
                             <div class="category-title">
                                 <span class="title">포트폴리오</span>
-                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px" loading="lazy">    
+                                <img class="toggleBtn img-filter-invert" src="../image/open_category_more.png" alt="" width="36px" loading="lazy">    
                             </div>
                             <div class="category-more">
                                 <div class="category-item clicked-item" id="my_portfolio">내 포트폴리오</div>
@@ -75,7 +78,7 @@
                         <div class="category-content">
                             <div class="category-title">
                                 <span class="title">증시 뉴스</span>
-                                <img class="toggleBtn" src="../image/open_category_more.png" alt="" width="36px" loading="lazy">    
+                                <img class="toggleBtn img-filter-invert" src="../image/open_category_more.png" alt="" width="36px" loading="lazy">    
                             </div>
                             <div class="category-more">
                                 <div class="category-item" id="main_news">주요 증시 뉴스</div>
@@ -198,10 +201,6 @@
                                 </div>
                             </div>
                             <div class="final-goal">
-                                <div class="vertical-progress-bar">
-                                    <div class="retirement-vertical-progress"></div>
-                                </div>
-                                <div class="retirement-vertical-progress-percent">33%</div>
                                 <div class="todays-box">
                                     <blockquote class="todays-maxim">
                                         <q>비트코인? 넌 이런거 하지마라.</q> 
@@ -333,7 +332,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h3>남은 기한</h3>
+                                            <h3>은퇴 달성률</h3>
                                             <div class="cssProgress">
                                                 <div class="progress2">
                                                     <div class="cssProgress-bar cssProgress-success cssProgress-active" data-percent="75" style="width: 75%;">
@@ -341,14 +340,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div class="vertical-progress">
-                                            <div class="vertical-progress-bar vertical-for-comparison">
-                                                <div class="retirement-vertical-progress my-vertical-progress"></div>
-                                            </div>
-                                            <div class="my-percent-for-comparison">5%</div>
-                                            <span class="retirement-vertical-title">은퇴 달성률</span>
                                         </div>
                                     </div>
                                 </div>
@@ -365,7 +356,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <h3>남은 기한</h3>
+                                            <h3>은퇴 달성률</h3>
                                             <div class="cssProgress">
                                                 <div class="progress2">
                                                     <div class="cssProgress-bar cssProgress-success cssProgress-active" data-percent="29" style="width: 29%;">
@@ -373,14 +364,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        
-                                        <div class="vertical-progress">
-                                            <div class="vertical-progress-bar vertical-for-comparison">
-                                                <div class="retirement-vertical-progress user-vertical-progress"></div>
-                                            </div>
-                                            <div class="user-percent-for-comparison">85%</div>
-                                            <span class="retirement-vertical-title">은퇴 달성률</span>    
                                         </div>
                                     </div>
                                 </div>
@@ -1050,7 +1033,7 @@
         </main>
     </div>
 
-    <script src="js/account.js"></script>
+    <!-- <script src="js/account.js"></script> -->
     <script src="js/loadCamperStory.js"></script>
     <script src="js/portfolioChart.js"></script>
     <script src="js/snbLoading.js"></script>

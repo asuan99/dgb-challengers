@@ -41,7 +41,7 @@ function drawMyChart() {
     // set chart radius
     .radius('45%')
     // create empty area in pie chart
-    .innerRadius('40%');
+    .innerRadius('30%');
 
 
   // set container id for the chart

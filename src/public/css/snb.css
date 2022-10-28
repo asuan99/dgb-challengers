@@ -2,13 +2,13 @@
     position: relative;
     left: 0;
 
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #181E3A;
 
     transition: all 0.5s ease-in-out;
 }
 
 .snb{
-    width: 288px;
+    width: 224px;
     height: 100vh;
     padding: 10px 5px;
 }
@@ -34,6 +34,7 @@
 }
 
 .snb-close{
+    padding: 0 10px;
     cursor: pointer;
 }
 
@@ -42,21 +43,18 @@
     padding-bottom: 15px;
     border-bottom: 1px solid gray;
     align-items: center;
-    gap: 20px;
-}
-
-.profile-image{
-    display: inline-block;
-    border: 1px solid gray;
-    border-radius: 25%;
-    overflow: hidden;
 }
 
 .profile-name{
     font-size: 14px;
-
     color: white;
 }
+
+.profile-name .logo-name{
+    font-size: 24px;
+    font-family: 'Permanent Marker';
+}
+
 
 .category{
     height: 80vh;
@@ -82,6 +80,11 @@
 
 .toggleBtn, .title{
     cursor: pointer;
+    font-size: 14px;
+}
+
+.img-filter-invert{
+    filter: invert(100%);
 }
 
 .category-more{
@@ -92,7 +95,7 @@
     padding: 8px 16px;
     background-color: transparent;
     color: white;
-    font-size: 16px;
+    font-size: 12px;
     cursor:pointer;
 }
 
@@ -112,7 +115,7 @@
 .logout-btn{
     background-color: transparent;
     border: none;
-    font-size: 18px !important;
+    font-size: 14px !important;
 }
 
 .mypage-btn>a,
@@ -121,7 +124,7 @@
 }
 
 .clicked-item{
-    background-color: #6EC1E4 !important;
+    background-color: gray !important;
 }
 
 .clicked-close{

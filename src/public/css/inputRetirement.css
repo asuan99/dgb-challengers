@@ -108,6 +108,7 @@
 .retirement-info-table table{
     width: 100%;
     text-align: center;
+    background-color: black;
 }
 
 .retirement-info-table tr,
