@@ -6,6 +6,16 @@
     justify-content: center;
     /* background: transparent url("../image/accident_background.jpg") no-repeat; */
     gap: 96px;
+    position: relative;
+}
+
+.my-portfolio-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px 0 30px 30px;
+    color: white;
+    font-size: 24px;
 }
 
 .portfolio-left-content{
@@ -22,6 +32,7 @@
 }
 
 .my-portfolio-graph {
+    padding: 30px 30px 0 0;
     width: 864px;
     height: 540px;
 }

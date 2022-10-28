@@ -32,12 +32,6 @@ function drawMyChart() {
       height: '160px',
       align: 'middle',
     })
-    .title({
-      text: '내 포트폴리오',
-      align: 'left',
-      fontColor: 'white',
-      fontSize: '32px',
-    })
     // set chart radius
     .radius('45%')
     // create empty area in pie chart
