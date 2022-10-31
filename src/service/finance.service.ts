@@ -70,29 +70,37 @@ class FinanceService{
         
         
         let StockList:StockDto[] = [];
-        for (const stock of domestic_account){
-            const json:StockDto = {
-                code : 'k',
-                pdno : stock.pdno,         //번호
-                name : stock.prdt_name,        //이름
-                evlu_pfls_rt : stock.evlu_pfls_rt,   //수익률
-                pchs_amt : stock.pchs_amt,      //구매금액
-                evlu_amt : stock.evlu_amt       // 현재금액(평가금액)
-            }
-            StockList.push(json);
+        let total_price:number = 0;
+        for (const price of domestic_account){
+            total_price += Number(price.pchs_amt)
         }
-        for (const stock of overseas_account){
-            const json:StockDto={
-                code : 'u',
-                pdno : stock.ovrs_pdno,
-                name : stock.ovrs_item_name,
-                evlu_pfls_rt : stock.evlu_pfls_rt,
-                pchs_amt : stock.pchs_avg_pric,
-                evlu_amt : stock.frcr_evlu_pfls_amt,
-            }
-            StockList.push(json);
+        for (const price of overseas_account){
+            total_price += Number(price.pchs_avg_pric)
         }
-        return StockList;
+        // for (const stock of domestic_account){
+        //     const json:StockDto = {
+        //         code : 'k',
+        //         pdno : stock.pdno,         //번호
+        //         name : stock.prdt_name,        //이름
+        //         evlu_pfls_rt : stock.evlu_pfls_rt,   //수익률
+        //         pchs_amt : stock.pchs_amt,      //구매금액
+        //         evlu_amt : stock.evlu_amt       // 현재금액(평가금액)
+        //     }
+        //     StockList.push(json);
+        // }
+        // for (const stock of overseas_account){
+        //     const json:StockDto={
+        //         code : 'u',
+        //         pdno : stock.ovrs_pdno,
+        //         name : stock.ovrs_item_name,
+        //         evlu_pfls_rt : stock.evlu_pfls_rt,
+        //         pchs_amt : stock.pchs_avg_pric,
+        //         evlu_amt : stock.frcr_evlu_pfls_amt,
+        //     }
+        //     StockList.push(json);
+        // }
+        // console.log(StockList[0]);
+        // return StockList;
     }
     get default(){
         return {    

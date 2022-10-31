@@ -5,6 +5,7 @@ interface StockDto {
     evlu_pfls_rt : string,
     pchs_amt : string,
     evlu_amt : string,
+    hld_rt : Number,
 }
 
 
