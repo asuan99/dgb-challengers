@@ -31,6 +31,7 @@ function drawMyChart() {
       itemsLayout: 'vertical-expandable',
       height: '160px',
       align: 'middle',
+      fontColor: '#ffffff',
     })
     // set chart radius
     .radius('45%')
@@ -46,15 +47,10 @@ function drawMyChart() {
 
 function drawDupleChart() {
   let chart = anychart.pie([
-    ['a', 1],
-    ['b', 1],
-    ['c', 1],
-    ['d', 1],
-    ['e', 1],
-    ['f', 1],
-    ['g', 1],
-    ['h', 1],
-    ['i', 1],
+    ['삼성전자', 3],
+    ['네이버', 4],
+    ['루닛', 1],
+    ['DGB 금융지주', 1],
     ['others', 1],
   ]);
 
@@ -69,6 +65,7 @@ function drawDupleChart() {
       itemsLayout: 'vertical-expandable',
       height: '160px',
       align: 'middle',
+      fontColor: '#ffffff',
     })
     .title({
       text: '내 포트폴리오',
@@ -87,10 +84,10 @@ function drawDupleChart() {
 
 function drawUserChart() {
   var chart = anychart.pie([
-    ['a', 5],
-    ['b', 2],
-    ['c', 3],
-    ['d', 1],
+    ['LG화학', 5],
+    ['대한항공', 2],
+    ['포스코', 3],
+    ['카카오', 1],
     ['others', 1],
   ]);
 
@@ -105,6 +102,7 @@ function drawUserChart() {
       itemsLayout: 'vertical-expandable',
       height: '160px',
       align: 'middle',
+      fontColor: '#ffffff',
    })
     .title({
       text: '유저 포트폴리오',

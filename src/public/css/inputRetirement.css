@@ -130,22 +130,3 @@
 
     cursor: pointer;
 }
-
-.retirement-info-table{
-    margin: 32px 0;
-    padding: 0 80px;
-    font-size: 24px;
-    color: white;
-}
-
-.retirement-info-table table{
-    width: 100%;
-    text-align: center;
-    background-color: black;
-}
-
-.retirement-info-table tr,
-.retirement-info-table td{
-    border: 1px solid white;
-    padding: 4px 0;
-}
