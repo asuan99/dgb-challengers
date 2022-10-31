@@ -2,7 +2,7 @@
     display: flex;
     position: relative;
     padding: 72px;
-    height: 662px;
+    height: 760px;
 }
 
 .js-slide{
@@ -183,7 +183,7 @@
 
 #go_manage_btn{
     position: absolute;
-    bottom: 64px;
+    bottom: 30%;
     left: 45%;
     
     font-size: 20px;

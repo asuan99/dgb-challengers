@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/mainSection.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/media.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -262,23 +263,16 @@
         <button id="scrollTopBtn" style="visibility: hidden;"><a href="#header">TOP</a></button>
     </div>
 
-    <script>
-        function clickLogout() {
-            window.href = '/user/withdrawl';
-            console.log()
-    } 
-    </script>
-
-    <script>
-        function OnClickNotImplement() {
-            alert("Not Implemented");
-        }
-    </script>
-    <script src="js/startUser.js"></script>
+    <script src="js/logout.js"></script>
+    <0script src="js/startUser.js"></script>
     <script src="js/slideIndex.js"></script>
     <script src="js/topMove.js"></script>
     <script src="js/modal.js"></script>
     <script>
+        function OnClickNotImplement() {
+            alert("Not Implemented");
+        }
+
         $(".auth-for-signup").click(function(){
             var tmpWindow = window.open('about:blank')
             tmpWindow.location = 

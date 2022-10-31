@@ -1,5 +1,23 @@
 @media (max-width: 1536px) {
+    .main-section{
+        height: 662px !important;
+    }
+
+    .main-banner{
+        background-size: cover !important;
+    }
+
+    #go_manage_btn{
+        bottom: 64px !important;
+    }
+    
     .main-content>* {
         zoom: 75%;
     }   
+}
+
+@media (max-width: 1300px) {
+    * {
+        display: none;
+    }
 }
